@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /assets/vendor/
+Disallow: /assets/vendor/php-email-form/
+Disallow: /print.html
+Disallow: /signature.html
+Allow: /
+
+Sitemap: https://www.ladangwohijo.com/sitemap.xml

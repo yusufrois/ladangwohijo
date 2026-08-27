@@ -1,0 +1,32 @@
+# ═══════════════════════════════════════════════════
+# LadangWohIjo — .htaccess
+# Domain resmi: https://www.ladangwohijo.com
+# ═══════════════════════════════════════════════════
+
+RewriteEngine On
+
+# 1) Paksa HTTPS (kalau masih ada akses http://)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2) Paksa domain non-www → www (redirect 301 permanen)
+RewriteCond %{HTTP_HOST} ^ladangwohijo\.com [NC]
+RewriteRule ^(.*)$ https://www.ladangwohijo.com/$1 [L,R=301]
+
+# ═══════════════════════════════════════════════════
+# Tambahan: rapikan trailing slash pada index.html
+# Supaya /index.html otomatis redirect ke /
+# ═══════════════════════════════════════════════════
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+
+# ═══════════════════════════════════════════════════
+# Halaman 404 kustom
+# ═══════════════════════════════════════════════════
+ErrorDocument 404 /404.html
+
+# ═══════════════════════════════════════════════════
+# Keamanan dasar tambahan (opsional tapi disarankan)
+# ═══════════════════════════════════════════════════
+Options -Indexes
+ServerSignature Off

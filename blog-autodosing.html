@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G8FKKG1KNB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G8FKKG1KNB');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>IoT Autodosing Greenhouse Melon Blitar | LadangWohIjo</title>
+<meta name="author" content="Yusuf Ro'is Wahyudi">
+
+<meta name="description" content="Panduan sistem IoT autodosing untuk monitoring pH, TDS, dan nutrisi otomatis di greenhouse melon hidroponik LadangWohIjo Blitar." />
+
+<meta property="og:title" content="Sistem IoT Autodosing Greenhouse Melon Hidroponik Blitar | LadangWohIjo" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.ladangwohijo.com/assets/img/blog/LWI-monitoring.jpg" />
+<meta name="keywords" content="IoT autodosing greenhouse, sistem monitoring greenhouse melon, pH TDS otomatis hidroponik, ESP32 greenhouse Blitar, smart farming melon, LadangWohIjo IoT" />
+<meta property="og:description" content="Sistem IoT autodosing untuk greenhouse melon hidroponik di Blitar. Monitoring pH, TDS, dan nutrisi otomatis untuk pertanian modern yang lebih presisi dan efisien." />
+<meta property="og:url" content="https://www.ladangwohijo.com/blog-autodosing.html" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:site_name" content="LadangWohIjo" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sistem IoT Autodosing Greenhouse Melon Hidroponik Blitar | LadangWohIjo" />
+<meta name="twitter:description" content="Sistem IoT autodosing untuk greenhouse melon hidroponik di Blitar. Monitoring pH, TDS, dan nutrisi otomatis untuk pertanian modern yang lebih presisi dan efisien." />
+<meta name="twitter:image" content="https://www.ladangwohijo.com/assets/img/blog/LWI-monitoring.jpg" />
+
+<link rel="canonical" href="https://www.ladangwohijo.com/blog-autodosing.html" />
+
+<meta name="robots" content="index, follow" />
+
+
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon" sizes="any">
+  <link href="favicon.png" rel="icon" type="image/png" sizes="512x512">
+  <link href="favicon-48.png" rel="icon" type="image/png" sizes="48x48">
+  <link href="favicon.png" rel="apple-touch-icon">
+
+  <link rel="preload" as="image" href="assets/img/GH.jpg" fetchpriority="high">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: KnightOne
+  * Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
+  * Updated: Oct 16 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9427449454032309"
+     crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LadangWohIjo — Greenhouse Melon Profesional",
+  "alternateName": "Ladang Woh Ijo",
+  "url": "https://www.ladangwohijo.com",
+  "logo": "https://www.ladangwohijo.com/assets/img/lwi-logo.png",
+  "image": "https://www.ladangwohijo.com/assets/img/GH.jpg",
+  "description": "Sistem IoT autodosing untuk greenhouse melon hidroponik di Blitar dengan monitoring pH, TDS, dan nutrisi otomatis berbasis Internet of Things.",
+  "telephone": "+62-857-7710-9777",
+  "email": "info@ladangwohijo.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Pasar Ngentak Gandusari",
+    "addressLocality": "Blitar",
+    "addressRegion": "Jawa Timur",
+    "postalCode": "66187",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -8.026734,
+    "longitude": 112.158010
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "17:00"
+  },
+  "priceRange": "$$",
+  "hasMap": "https://maps.app.goo.gl/8zYWWnGLkk7UAfju9",
+  "sameAs": [
+    "https://www.instagram.com/greenhouse_ladangwohijo",
+    "https://www.youtube.com/@ladangwohijo",
+    "https://www.tiktok.com/@ladang_wohijo",
+    "https://maps.app.goo.gl/8zYWWnGLkk7UAfju9"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Yusuf Ro'is Wahyudi",
+    "jobTitle": "Founder & CEO"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia"
+  },
+  "serviceType": ["Pembangunan Greenhouse", "Budidaya Melon Hidroponik", "Kemitraan Pertanian", "Pembibitan Melon"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Sistem IoT Autodosing untuk Greenhouse Melon Hidroponik di Blitar",
+  "description": "Sistem IoT autodosing untuk greenhouse melon hidroponik di Blitar dengan monitoring pH, TDS, dan nutrisi otomatis berbasis Internet of Things.",
+  "author": {
+    "@type": "Person",
+    "name": "Yusuf Ro'is Wahyudi",
+    "url": "https://www.ladangwohijo.com/blog-details.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LadangWohIjo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ladangwohijo.com/assets/img/lwi-logo.png"
+    }
+  },
+  "url": "https://www.ladangwohijo.com/blog-autodosing.html",
+  "mainEntityOfPage": "https://www.ladangwohijo.com/blog-autodosing.html",
+  "datePublished": "2025-04-01",
+  "dateModified": "2025-05-01",
+  "image": "https://www.ladangwohijo.com/assets/img/blog/LWI-monitoring.jpg",
+  "inLanguage": "id"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Beranda","item":"https://www.ladangwohijo.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.ladangwohijo.com/blog.html"},
+    {"@type":"ListItem","position":3,"name":"IoT Autodosing Greenhouse Melon","item":"https://www.ladangwohijo.com/blog-autodosing.html"}
+  ]
+}
+</script>
+
+<style>
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  background: #1a5c38;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 0 8px 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 99999;
+  transition: top .2s;
+}
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+}
+</style>
+
+<style>
+@media print {
+  #header, .page-title, .sidebar, #comment-form, #blog-comments,
+  .wa-float-btn, #scroll-top, .cta-btn, #footer, .meta-top a[href^="#"] {
+    display: none !important;
+  }
+  .blog-details, article.article {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  body { font-size: 12pt; color: #000; }
+  a { color: #000; text-decoration: underline; }
+  .content h2, .content h3 { page-break-after: avoid; }
+  .content table, .content ul, .content ol { page-break-inside: avoid; }
+}
+</style>
+</head>
+
+
+<body class="blog-details-page">
+<a href="#main" class="skip-link">Langsung ke konten utama</a>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+  
+  <img src="assets/img/lwi-logo.png" 
+       alt="Logo LadangWohIjo"
+       style="height:80px; margin-right:1px;">
+
+  <div style="color:white; font-size:30px; font-weight:700;">
+    LadangWohIjo
+  </div>
+
+</a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#about">Tentang</a></li>
+          <li><a href="index.html#services">Layanan</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <!-- <li><a href="#pricing">Pricing</a></li> -->
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="index.html#contact">Kontak</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="https://wa.me/6285777109777?text=Halo%20LadangWohIjo!%20Saya%20ingin%20konsultasi%20greenhouse%20melon.">Konsultasi</a>
+
+    </div>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/GH.jpg);">
+      <div class="container position-relative">
+        <h1>Sistem IoT Autodosing untuk Greenhouse Melon Hidroponik di Blitar</h1>
+        <p>Panduan sistem IoT autodosing untuk monitoring pH, TDS, dan nutrisi otomatis di greenhouse melon hidroponik — teknologi smart farming LadangWohIjo Blitar.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">IoT Autodosing Greenhouse</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="container">
+
+              <article class="article">
+
+                <div class="post-img">
+                
+                  <img src="assets/img/blog/LWI-monitoring.jpg" alt="Sistem IoT autodosing monitoring greenhouse melon hidroponik LadangWohIjo Blitar" class="img-fluid" loading="lazy">
+                </div>
+
+                <h2 class="title">
+Sistem IoT Autodosing untuk Greenhouse Melon Hidroponik di Blitar
+</h2>
+    
+                <div class="meta-top">
+                  <ul>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">Yusuf Ro'is Wahyudi</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2025-05-01">Mei 01, 2025</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">10 Comments</a></li>
+                  </ul>
+                </div><!-- End meta top -->
+
+                <div class="content">
+
+<p>Pertanian modern terus berkembang seiring kemajuan teknologi. Di tengah meningkatnya kebutuhan akan hasil panen berkualitas tinggi, penggunaan <strong>sistem IoT autodosing pada greenhouse melon hidroponik di Blitar</strong> menjadi solusi inovatif yang mulai banyak diterapkan petani modern.</p>
+
+<p>Teknologi ini memungkinkan proses pemberian nutrisi dilakukan secara otomatis, presisi, dan real-time sehingga budidaya melon hidroponik menjadi lebih efisien, stabil, dan produktif.</p>
+
+<h3>Apa Itu Sistem IoT Autodosing?</h3>
+
+<p>IoT autodosing adalah sistem otomatis yang mengatur pencampuran dan pemberian nutrisi tanaman menggunakan sensor digital dan kontrol berbasis internet.</p>
+
+<p>Pada greenhouse melon hidroponik, sistem ini berfungsi untuk menjaga kestabilan:</p>
+
+<ul>
+  <li>pH air nutrisi</li>
+  <li>EC/TDS nutrisi</li>
+  <li>volume air</li>
+  <li>jadwal pemberian nutrisi</li>
+  <li>monitoring greenhouse real-time</li>
+</ul>
+
+<p>Dengan teknologi IoT (Internet of Things), petani dapat memantau kondisi greenhouse langsung dari smartphone kapan saja dan dari mana saja.</p>
+
+<h3>Kenapa Greenhouse Melon Membutuhkan Autodosing?</h3>
+
+<p>Dalam budidaya melon hidroponik, kestabilan nutrisi sangat penting. Perubahan EC atau pH yang terlalu drastis dapat menyebabkan:</p>
+
+<ul>
+  <li>pertumbuhan tanaman tidak stabil</li>
+  <li>buah kecil</li>
+  <li>rasa melon kurang manis</li>
+  <li>daun menguning</li>
+  <li>akar rusak</li>
+  <li>gagal panen</li>
+</ul>
+
+<p>Karena itu, penggunaan sistem autodosing pada greenhouse Blitar menjadi solusi untuk menjaga kualitas nutrisi tetap presisi selama 24 jam.</p>
+
+<h3>Keunggulan Sistem IoT Autodosing</h3>
+
+<h3>Nutrisi Presisi Otomatis: pH dan TDS Terjaga 24 Jam</h3>
+
+<p>Sistem autodosing mampu membaca nilai TDS dan pH secara otomatis menggunakan sensor digital. Ketika nilai nutrisi turun, pompa dosing akan bekerja otomatis menambahkan larutan nutrisi sesuai kebutuhan tanaman melon.</p>
+
+<h3>Monitoring Greenhouse Melon Real-Time dari Smartphone</h3>
+
+<p>Dengan sistem IoT greenhouse, petani dapat memonitor:</p>
+
+<ul>
+  <li>pH air</li>
+  <li>TDS nutrisi</li>
+  <li>suhu greenhouse</li>
+  <li>kelembaban</li>
+  <li>kondisi pompa</li>
+  <li>level air nutrisi</li>
+</ul>
+
+<p>langsung melalui smartphone.</p>
+
+<h3>Efisiensi Waktu: Dari Manual ke Otomatis dengan IoT</h3>
+
+<p>Sebelum menggunakan autodosing, pengecekan nutrisi dilakukan manual setiap hari. Kini proses tersebut dapat berjalan otomatis sehingga lebih efisien.</p>
+
+<h3>Solusi Tepat untuk Greenhouse Melon Hidroponik Modern</h3>
+
+<p>Penggunaan sistem IoT membuat greenhouse melon hidroponik terlihat lebih profesional dan modern.</p>
+
+<h3>Teknologi yang Digunakan pada Sistem Autodosing LadangWohIjo</h3>
+
+<p>LadangWohIjo mengembangkan sistem autodosing greenhouse menggunakan berbagai komponen modern seperti:</p>
+
+<ul>
+  <li>ESP32 WiFi Controller</li>
+  <li>Sensor pH Digital</li>
+  <li>Sensor TDS / EC</li>
+  <li>Pompa Dosing Otomatis</li>
+  <li>Monitoring via Smartphone</li>
+  <li>Sistem Tangki Nutrisi Otomatis</li>
+</ul>
+
+<h3>Greenhouse Melon Hidroponik di Blitar Semakin Modern</h3>
+
+<p>Banyak petani mulai beralih menggunakan:</p>
+
+<ul>
+  <li>greenhouse hidroponik</li>
+  <li>sistem fertigasi otomatis</li>
+  <li>sensor IoT pertanian</li>
+  <li>autodosing nutrisi</li>
+</ul>
+
+<p>karena terbukti mampu meningkatkan kualitas dan produktivitas tanaman melon premium.</p>
+
+<h3>LadangWohIjo Siap Membantu Pengembangan Greenhouse Modern</h3>
+
+<p>Sebagai penyedia jasa greenhouse Blitar dan pendamping budidaya melon hidroponik profesional, LadangWohIjo terus mengembangkan teknologi pertanian berbasis IoT untuk membantu petani Indonesia naik kelas.</p>
+
+<ul>
+  <li>pembangunan greenhouse modern</li>
+  <li>instalasi sistem hidroponik</li>
+  <li>sistem IoT autodosing</li>
+  <li>pendampingan budidaya melon</li>
+  <li>monitoring greenhouse</li>
+  <li>konsultasi pertanian modern</li>
+</ul>
+
+<h3>IoT Autodosing: Masa Depan Greenhouse Melon Hidroponik Indonesia</h3>
+
+<p>Penggunaan sistem IoT autodosing pada greenhouse melon hidroponik di Blitar menjadi solusi modern untuk meningkatkan efisiensi dan kualitas budidaya melon.</p>
+
+<p>Dengan kontrol nutrisi otomatis dan monitoring real-time, petani dapat menghasilkan melon premium yang lebih sehat, manis, dan berkualitas tinggi.</p>
+
+<h3>Cara Kerja Sistem IoT Autodosing LadangWohIjo Step by Step</h3>
+
+<p>Banyak petani bertanya bagaimana sebenarnya cara kerja sistem IoT autodosing di greenhouse melon LadangWohIjo. Berikut penjelasan teknis yang disederhanakan:</p>
+
+<ol>
+  <li><strong>Sensor membaca kondisi nutrisi</strong> — Sensor pH dan TDS/EC yang tercelup di tanki nutrisi membaca nilai secara real-time setiap 10–30 menit</li>
+  <li><strong>Data dikirim ke ESP32</strong> — Mikrokontroler ESP32 memproses data dari sensor dan membandingkan dengan nilai target yang sudah diprogram</li>
+  <li><strong>Pompa dosing aktif otomatis</strong> — Jika pH terlalu tinggi, pompa larutan asam aktif. Jika EC terlalu rendah, pompa larutan nutrisi A atau B aktif secara proporsional</li>
+  <li><strong>Data dikirim ke cloud</strong> — Melalui WiFi, data dikirim ke server dan dapat dipantau dari aplikasi smartphone petani</li>
+  <li><strong>Alert & notifikasi</strong> — Jika ada nilai yang melampaui batas aman, sistem mengirim notifikasi ke HP petani secara otomatis</li>
+</ol>
+
+<p>Dengan siklus ini berjalan otomatis 24 jam, petani tidak perlu mengecek kondisi greenhouse setiap saat. Cukup pantau dashboard di smartphone dan tangani jika ada notifikasi darurat.</p>
+
+<h3>Perbandingan Sistem Manual vs IoT Autodosing untuk Melon Hidroponik</h3>
+
+<div style="overflow-x:auto;">
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;">
+  <thead>
+    <tr style="background:#1a5c38;color:white;">
+      <th style="padding:.6rem 1rem;text-align:left;">Aspek</th>
+      <th style="padding:.6rem 1rem;text-align:center;">Manual</th>
+      <th style="padding:.6rem 1rem;text-align:center;">IoT Autodosing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f4f6f8;">
+      <td style="padding:.6rem 1rem;"><strong>Frekuensi cek nutrisi</strong></td>
+      <td style="padding:.6rem 1rem;text-align:center;">1–2x sehari</td>
+      <td style="padding:.6rem 1rem;text-align:center;">Setiap 10–30 menit</td>
+    </tr>
+    <tr>
+      <td style="padding:.6rem 1rem;"><strong>Akurasi dosis</strong></td>
+      <td style="padding:.6rem 1rem;text-align:center;">Tergantung keahlian</td>
+      <td style="padding:.6rem 1rem;text-align:center;">Presisi ±0.1 pH / ±5 ppm</td>
+    </tr>
+    <tr style="background:#f4f6f8;">
+      <td style="padding:.6rem 1rem;"><strong>Respon perubahan</strong></td>
+      <td style="padding:.6rem 1rem;text-align:center;">Terlambat (jam)</td>
+      <td style="padding:.6rem 1rem;text-align:center;">Real-time (menit)</td>
+    </tr>
+    <tr>
+      <td style="padding:.6rem 1rem;"><strong>Monitoring jarak jauh</strong></td>
+      <td style="padding:.6rem 1rem;text-align:center;">❌ Tidak bisa</td>
+      <td style="padding:.6rem 1rem;text-align:center;">✅ Via smartphone</td>
+    </tr>
+    <tr style="background:#f4f6f8;">
+      <td style="padding:.6rem 1rem;"><strong>Risiko gagal panen</strong></td>
+      <td style="padding:.6rem 1rem;text-align:center;">Lebih tinggi</td>
+      <td style="padding:.6rem 1rem;text-align:center;">Jauh lebih rendah</td>
+    </tr>
+    <tr>
+      <td style="padding:.6rem 1rem;"><strong>Tenaga kerja</strong></td>
+      <td style="padding:.6rem 1rem;text-align:center;">Butuh lebih banyak</td>
+      <td style="padding:.6rem 1rem;text-align:center;">Lebih efisien</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Spesifikasi Komponen IoT Autodosing yang Digunakan LadangWohIjo</h3>
+
+<p>Agar lebih memahami sistem ini, berikut detail komponen IoT autodosing yang dikembangkan LadangWohIjo untuk greenhouse melon hidroponik di Blitar:</p>
+
+<ul>
+  <li><strong>ESP32 WROOM-32</strong>: Mikrokontroler utama dengan WiFi + Bluetooth, memproses data sensor dan mengendalikan relay pompa</li>
+  <li><strong>Sensor pH Analog + Modul pH Meter</strong>: Mengukur keasaman larutan nutrisi, range 0–14 pH dengan akurasi ±0.1</li>
+  <li><strong>Sensor TDS/EC Digital</strong>: Mengukur konduktivitas elektrik larutan nutrisi, menentukan konsentrasi pupuk dalam air</li>
+  <li><strong>Pompa Dosing Peristaltik</strong>: Memompa larutan nutrisi A, B, pH Up, atau pH Down secara presisi dalam volume kecil (ml)</li>
+  <li><strong>Relay Module 4-Channel</strong>: Mengontrol on/off pompa berdasarkan perintah dari ESP32</li>
+  <li><strong>Platform IoT (Blynk/ThingsBoard)</strong>: Dashboard monitoring di smartphone untuk melihat data real-time dan mengatur parameter target</li>
+  <li><strong>Tangki Nutrisi Stainless</strong>: Wadah larutan nutrisi utama yang terhubung ke sistem drip irigasi</li>
+</ul>
+
+<h3>Biaya dan ROI Sistem IoT Autodosing untuk Greenhouse Melon</h3>
+
+<p>Investasi sistem IoT autodosing bervariasi tergantung skala greenhouse. Untuk greenhouse melon skala kecil (500–1000 m²), estimasi biaya instalasi sistem autodosing dasar berkisar Rp 3–8 juta. Namun dengan keuntungan yang didapat — pengurangan gagal panen, efisiensi tenaga kerja, dan kualitas melon yang lebih konsisten — investasi ini biasanya sudah balik modal dalam 1–2 musim tanam.</p>
+
+<p>Hubungi LadangWohIjo untuk konsultasi gratis dan estimasi biaya sistem IoT autodosing yang sesuai dengan greenhouse dan kebutuhan Anda.</p>
+
+
+<p><em>Ingin membangun greenhouse modern dengan sistem IoT autodosing profesional? <strong><a href="https://wa.me/6285777109777">Hubungi LadangWohIjo Sekarang »</a></strong></em></p>
+
+
+<div style="background:linear-gradient(135deg,#1a5c38,#2d8a50);border-radius:12px;padding:1.5rem 1.8rem;margin:2rem 0;color:white;">
+  <h4 style="color:white;margin-bottom:.5rem;">Ingin Pasang Sistem IoT Autodosing di Greenhouse Anda?</h4>
+  <p style="color:rgba(255,255,255,.85);margin-bottom:1rem;">LadangWohIjo menyediakan jasa instalasi sistem IoT autodosing greenhouse melon hidroponik — dari konsultasi kebutuhan, instalasi hardware, hingga setup dashboard monitoring smartphone.</p>
+  <a href="https://wa.me/6285777109777?text=Halo%20LadangWohIjo!%20Saya%20baca%20artikel%20IoT%20Autodosing%20dan%20ingin%20konsultasi%20sistem%20monitoring%20greenhouse%20melon." target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:white;padding:.6rem 1.4rem;border-radius:50px;text-decoration:none;font-weight:600;">
+    <i class="bi bi-whatsapp"></i> Konsultasi Gratis Sekarang
+  </a>
+</div>
+<p><strong>Baca juga artikel terkait:</strong></p>
+<ul>
+  <li><a href="blog-hidroponik.html">Greenhouse Melon Hidroponik Blitar: Sistem Nutrisi & Budidaya Modern</a></li>
+  <li><a href="blog-penanaman.html">Pemupukan Melon Hidroponik: Formula AB Mix & Jadwal Lengkap</a></li>
+  <li><a href="blog-pembangunan.html">Pembangunan Greenhouse Bambu Blitar: Solusi Hemat & Efisien</a></li>
+  <li><a href="blog-details.html">Kisah Awal LadangWohIjo: Dari IT ke Pelopor Greenhouse Melon Blitar</a></li>
+</ul>
+
+
+</div>
+
+                <div class="meta-bottom">
+  <i class="bi bi-folder"></i>
+  <ul class="cats">
+    <li><a href="#">IoT Greenhouse</a></li>
+  </ul>
+
+  <i class="bi bi-tags"></i>
+  <ul class="tags">
+    <li><a href="#">Autodosing</a></li>
+    <li><a href="#">Melon Hidroponik</a></li>
+    <li><a href="#">Greenhouse Blitar</a></li>
+    <li><a href="#">IoT Pertanian</a></li>
+  </ul>
+</div><!-- End meta bottom -->
+
+              </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+          <!-- Blog Comments Section -->
+          <section id="blog-comments" class="blog-comments section">
+
+  <div class="container">
+
+    <h4 class="comments-count">4 Diskusi Greenhouse & IoT</h4>
+
+    <div id="comment-1" class="comment">
+      <div class="d-flex">
+        <div class="comment-img"><img src="assets/img/blog/11.jpg" alt="Pertanyaan Rudi tentang monitoring pH TDS greenhouse melon via smartphone" loading="lazy"></div>
+        <div>
+          <h5><a href="">Rudi</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+          <time datetime="2025-05-15">15 Mei, 2025</time>
+          <p>
+            Keren sekali sistem autodosingnya. Apakah monitoring pH dan TDS greenhouse melon ini bisa dipantau langsung dari HP secara real-time?
+          </p>
+        </div>
+      </div>
+    </div><!-- End comment #1 -->
+
+    <div id="comment-2" class="comment">
+      <div class="d-flex">
+        <div class="comment-img"><img src="assets/img/blog/11.jpg" alt="Pertanyaan Agus tentang IoT autodosing greenhouse melon skala kecil" loading="lazy"></div>
+        <div>
+          <h5><a href="">Agus</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+          <time datetime="2025-05-20">20 Mei, 2025</time>
+          <p>
+            Apakah sistem IoT autodosing ini cocok digunakan untuk greenhouse melon hidroponik skala kecil?
+          </p>
+        </div>
+      </div>
+
+      <div id="comment-reply-1" class="comment comment-reply">
+        <div class="d-flex">
+          <div class="comment-img"><img src="assets/img/blog/yusufr.jpg" alt="Yusuf Ro'is Wahyudi membalas pertanyaan tentang IoT autodosing greenhouse melon" loading="lazy"></div>
+          <div>
+            <h5><a href="">Yusuf Ro'is Wahyudi</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+            <time datetime="2025-06-20">20 Jun, 2025</time>
+            <p>
+              Halo Kak Agus! Tentu bisa. Sistem IoT autodosing dapat digunakan mulai dari greenhouse kecil hingga skala komersial. Dengan sistem ini, pencampuran nutrisi melon hidroponik menjadi lebih presisi dan otomatis sehingga petani lebih mudah mengontrol kualitas tanaman. Monitoring pH, TDS, dan kondisi greenhouse juga dapat dipantau langsung melalui smartphone.
+            </p>
+          </div>
+        </div>
+      </div><!-- End comment reply #1-->
+
+    </div><!-- End comment #2-->
+
+    <div id="comment-3" class="comment">
+      <div class="d-flex">
+        <div class="comment-img"><img src="assets/img/blog/11.jpg" alt="Pertanyaan Heru tentang efisiensi pupuk dengan sistem autodosing" loading="lazy"></div>
+        <div>
+          <h5><a href="">Heru</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+          <time datetime="2025-06-25">25 Jun, 2025</time>
+          <p>
+            Menarik sekali teknologi greenhouse modern seperti ini. Apakah sistem autodosing bisa membantu menghemat penggunaan pupuk nutrisi melon hidroponik?
+          </p>
+        </div>
+      </div>
+
+    </div><!-- End comment #3 -->
+
+    <div id="comment-4" class="comment">
+      <div class="d-flex">
+        <div class="comment-img"><img src="assets/img/blog/11.jpg" alt="Pertanyaan Lutfi tentang instalasi IoT autodosing LadangWohIjo Blitar" loading="lazy"></div>
+        <div>
+          <h5><a href="">Lutfi</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+          <time datetime="2026-04-15">15 Apr, 2026</time>
+          <p>
+            Saya tertarik membangun greenhouse melon hidroponik di Blitar. Apakah LadangWohIjo juga menyediakan instalasi IoT autodosing dan pendampingan budidaya?
+          </p>
+        </div>
+      </div>
+
+    </div><!-- End comment #4 -->
+
+  </div>
+
+</section><!-- /Blog Comments Section -->
+
+          <!-- Comment Form Section -->
+          <section id="comment-form" class="comment-form section">
+            <div class="container">
+
+              <form onsubmit="submitComment(event)">
+
+               <h4>Konsultasi & Diskusi</h4>
+<p>Silakan tinggalkan pertanyaan, pengalaman, atau konsultasi seputar greenhouse melon hidroponik, sistem IoT autodosing, dan pertanian modern bersama LadangWohIjo.</p>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input name="name" type="text" class="form-control" placeholder="Nama*">
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input name="email" type="text" class="form-control" placeholder="Email*">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col form-group">
+                    <input name="website" type="text" class="form-control" placeholder="Alamat">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col form-group">
+                    <textarea name="comment" class="form-control" placeholder="Komentar*"></textarea>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-success" style="background:#25D366;border:none;padding:.6rem 2rem;">
+                    <i class="bi bi-whatsapp"></i> Kirim
+                  </button>
+                </div>
+              </form>
+<script>
+function submitComment(e){
+  e.preventDefault();
+  var name=document.querySelector('[name="name"]').value||'Pengunjung';
+  var email=document.querySelector('[name="email"]').value||'-';
+  var msg=document.querySelector('[name="comment"]').value||'-';
+  var text=encodeURIComponent('Halo LadangWohIjo!\nNama: '+name+'\nEmail: '+email+'\nPertanyaan:\n'+msg);
+  window.open('https://wa.me/6285777109777?text='+text,'_blank');
+}
+</script>
+
+
+            </div>
+          </section><!-- /Comment Form Section -->
+
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container">
+
+            <!-- Blog Author Widget -->
+            <div class="blog-author-widget widget-item">
+
+              <div class="d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center w-100">
+                  <img src="assets/img/blog/yusufr.jpg" class="rounded-circle flex-shrink-0" loading="lazy" alt="Yusuf Ro'is Wahyudi — Founder LadangWohIjo, pengembang sistem IoT greenhouse melon Blitar">
+                  <div>
+                    <h4>Yusuf Ro'is Wahyudi</h4>
+                    <div class="social-links">
+                      <a href="https://www.tiktok.com/@ladang_wohijo" target="_blank" rel="noopener" aria-label="TikTok LadangWohIjo"><i class="bi bi-tiktok"></i></a>
+                      <a href="https://www.youtube.com/@ladangwohijo" target="_blank" rel="noopener" aria-label="YouTube LadangWohIjo"><i class="bi bi-youtube"></i></a>
+                      <a href="https://www.instagram.com/greenhouse_ladangwohijo/" target="_blank" rel="noopener" aria-label="Instagram LadangWohIjo"><i class="bi bi-instagram"></i></a>
+                      <a href="https://wa.me/6285777109777" target="_blank" rel="noopener" aria-label="WhatsApp LadangWohIjo"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Founder LadangWohIjo dan pengembang greenhouse melon hidroponik modern di Blitar. Fokus pada sistem IoT pertanian, autodosing nutrisi, dan teknologi greenhouse modern Indonesia.
+                </p>
+
+              </div>
+
+            </div><!--/Blog Author Widget -->
+
+            <!-- Search Widget -->
+            <div class="search-widget widget-item">
+
+              <h3 class="widget-title">Cari Artikel</h3>
+              <form onsubmit="submitComment(event)">
+                <input type="text" placeholder="Cari greenhouse, melon, IoT...">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+              </form>
+
+            </div><!--/Search Widget -->
+
+            <!-- Categories Widget -->
+            <div class="categories-widget widget-item">
+
+  <h3 class="widget-title">Kategori</h3>
+
+  <ul class="mt-3">
+    <li><a href="#">Greenhouse Blitar <span>(18)</span></a></li>
+    <li><a href="#">Melon Hidroponik <span>(14)</span></a></li>
+    <li><a href="#">IoT Pertanian <span>(9)</span></a></li>
+    <li><a href="#">Autodosing Greenhouse <span>(7)</span></a></li>
+    <li><a href="#">Pertanian Modern <span>(21)</span></a></li>
+    <li><a href="#">Budidaya Melon <span>(16)</span></a></li>
+  </ul>
+
+</div><!--/Categories Widget -->
+
+            <!-- Recent Posts Widget -->
+            <div class="recent-posts-widget widget-item">
+              <h3 class="widget-title">Artikel Terkait</h3>
+              <div class="post-item">
+                <img src="assets/img/blog/greenhouse-melon-blitar.jpg" alt="Greenhouse melon hidroponik Blitar LadangWohIjo" loading="lazy" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-hidroponik.html">Greenhouse Melon Hidroponik Blitar</a></h4>
+                  <time datetime="2025-06-20">Jun 20, 2025</time>
+                </div>
+              </div>
+              <div class="post-item">
+                <img src="assets/img/blog/8.jpg" alt="Pemupukan melon hidroponik nutrisi AB Mix" loading="lazy" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-penanaman.html">Pemupukan Melon Hidroponik: AB Mix</a></h4>
+                  <time datetime="2025-06-22">Jun 22, 2025</time>
+                </div>
+              </div>
+              <div class="post-item">
+                <img src="assets/img/blog/2023-07-09.jpg" alt="Kisah awal LadangWohIjo greenhouse melon Blitar" loading="lazy" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-details.html">Awal Mula LadangWohIjo: Dari IT ke Greenhouse</a></h4>
+                  <time datetime="2024-06-20">Jun 20, 2024</time>
+                </div>
+              </div>
+            </div><!--/Recent Posts Widget -->
+            <!-- Tags Widget -->
+            <div class="tags-widget widget-item">
+
+              <h3 class="widget-title">Tags</h3>
+              <ul>
+                <li><a href="blog-autodosing.html">IoT Greenhouse</a></li>
+                <li><a href="blog-autodosing.html">Autodosing Nutrisi</a></li>
+                <li><a href="blog-hidroponik.html">Greenhouse Blitar</a></li>
+                <li><a href="blog-penanaman.html">Monitoring pH TDS</a></li>
+                <li><a href="blog-hidroponik.html">Melon Hidroponik</a></li>
+                <li><a href="blog-ghi.html">Greenhouse Indonesia</a></li>
+              </ul>
+
+            </div><!--/Tags Widget -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">LadangWohIjo</h3>
+      <p>Solusi Greenhouse & Budidaya Melon Masa Kini.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://maps.app.goo.gl/8zYWWnGLkk7UAfju9" target="_blank" rel="noopener noreferrer" aria-label="Lokasi LadangWohIjo Google Maps"><i class="bi bi-map"></i></a>
+        <a href="https://www.youtube.com/@ladangwohijo" target="_blank" rel="noopener noreferrer" aria-label="YouTube LadangWohIjo"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.instagram.com/greenhouse_ladangwohijo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram LadangWohIjo"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ladang_wohijo" target="_blank" rel="noopener noreferrer" aria-label="TikTok LadangWohIjo"><i class="bi bi-tiktok"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">LadangWohIjo</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://ladangwohijo.com/">YR</a> Distributed by <a href="https://ladangwohijo.com">Master</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/6285777109777?text=Halo%20LadangWohIjo!%20Saya%20ingin%20konsultasi%20greenhouse%20melon."
+   class="wa-float-btn" target="_blank" rel="noopener" title="Chat WhatsApp LadangWohIjo"
+   style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;
+          width:58px;height:58px;border-radius:50%;display:flex;align-items:center;
+          justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.45);
+          text-decoration:none;animation:waPulse 2s infinite;">
+  <i class="bi bi-whatsapp" style="font-size:1.7rem;color:#fff;"></i>
+</a>
+<style>
+@keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.wa-float-btn:hover{background:#1ebe5d!important;transform:scale(1.12)!important;}
+</style>
+</body>
+
+</html>
