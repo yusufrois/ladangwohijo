@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KUMAHA GROUP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    h1 { color: #f39c12; }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1.2em;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      border: 1px solid #444;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-right: 10px;
+      background-color: #f39c12;
+      border: none;
+      border-radius: 5px;
+      color: #121212;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background: #1e1e1e;
+      border-radius: 5px;
+      position: relative;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      font-size: 0.9em;
+      cursor: pointer;
+      background-color: #555;
+      color: #f0f0f0;
+      border: none;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <center><h1>KUMAHA GROUP</h1></center>
+  <input type="text" id="inputAngka" placeholder="Masukkan 4 digit angka (misal: 1234)" maxlength="4" />
+  <button onclick="prosesPrediksi()">Prediksi</button>
+  <div class="result" id="hasil">
+    <button class="copy-btn" onclick="salinHasil()">Copy</button>
+  </div>
+
+  <script>
+    const dataset1 = ["23", "34", "45", "56", "67", "78", "89", "90", "01", "12"];
+    const dataset2 = ["01", "12", "23", "34", "45", "56", "67", "78", "89", "90"];
+    const dataset3 = ["12", "23", "34", "45", "56", "67", "78", "89", "90", "01"];
+
+    function reduceToDigit(n) {
+      while (n > 9) {
+        n = n.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+      }
+      return n;
+    }
+
+    function extractDigits(datasetArray) {
+      const digits = new Set();
+      datasetArray.forEach(pair => {
+        pair.split('').forEach(d => digits.add(d));
+      });
+      return Array.from(digits).sort().join('');
+    }
+
+    function extractDigitsFromDataset(dataset) {
+      const digitSet = new Set();
+      dataset.forEach(pair => {
+        pair.split('').forEach(d => digitSet.add(parseInt(d)));
+      });
+      return digitSet;
+    }
+
+    function getDatasetComplement(dataset) {
+      const allDigits = new Set([...Array(10).keys()]); // 0-9
+      const usedDigits = extractDigitsFromDataset(dataset);
+      const unusedDigits = [...allDigits].filter(d => !usedDigits.has(d));
+      return unusedDigits.sort().join('');
+    }
+
+    function prosesPrediksi() {
+      const input = document.getElementById("inputAngka").value;
+      const hasilDiv = document.getElementById("hasil");
+
+      if (!/^[0-9]{4}$/.test(input)) {
+        hasilDiv.innerHTML = "Masukkan harus 4 digit angka.";
+        return;
+      }
+
+      const angka = input.split('').map(Number);
+      const [as, kop, kep, ekor] = angka;
+
+      const data1Raw = [dataset1[as], dataset1[kop], dataset1[kep], dataset1[ekor]];
+      const data1 = extractDigits(data1Raw);
+
+      const sum1 = reduceToDigit(as + kop);
+      const sum2 = reduceToDigit(kop + kep);
+      const sum3 = reduceToDigit(kep + ekor);
+
+      const data2Raw = [dataset2[sum1], dataset2[sum2], dataset2[sum3]];
+      const data2 = extractDigits(data2Raw);
+
+      const data3Raw = [dataset3[sum1], dataset3[sum2], dataset3[sum3]];
+      const data3 = extractDigits(data3Raw);
+
+      const data4 = getDatasetComplement(data1Raw);
+      const data5 = getDatasetComplement(data2Raw);
+      const data6 = getDatasetComplement(data3Raw);
+
+      hasilDiv.innerHTML = `
+        <button class="copy-btn" onclick="salinHasil()">Copy</button>
+        <strong></strong> ${data1}<br>
+        <strong></strong> ${data2}<br>
+        <strong></strong> ${data3}<br>
+        <strong></strong> ${data4}<br>
+        <strong></strong> ${data5}<br>
+        <strong></strong> ${data6}
+      `;
+    }
+
+    function salinHasil() {
+      const hasilDiv = document.getElementById("hasil");
+      const text = hasilDiv.innerText.replace("Copy", "").trim();
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Hasil prediksi telah disalin ke clipboard.");
+      });
+    }
+  </script>
+</body>
+</html>
