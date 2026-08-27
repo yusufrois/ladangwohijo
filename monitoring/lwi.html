@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LWI</title>
+  <link href="apple-touch-icon.png" rel="icon">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Firebase (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <style>
+    body { background: #0f172a; color: #e6eef8; }
+    .glass { background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); backdrop-filter: blur(6px); }
+  </style>
+  <style>
+    .tab-btn {
+      @apply px-4 py-2 rounded-xl text-sm font-medium text-gray-300 bg-gray-700 hover:bg-gray-600 transition;
+    }
+    .active-tab {
+      @apply bg-blue-600 text-white shadow-md;
+    }
+    </style>
+  <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e293b">
+
+</head>
+<body class="min-h-screen p-4">
+  <div class="max-w-7xl mx-auto">
+    <style>
+          /* Animasi glow berdenyut untuk teks LWI */
+          @keyframes neonPulse {
+            0%, 100% {
+              text-shadow:
+                0 0 5px #39ff14,
+                0 0 10px #39ff14,
+                0 0 20px #39ff14,
+                0 0 40px #39ff14;
+            }
+            50% {
+              text-shadow:
+                0 0 10px #00ff55,
+                0 0 25px #00ff55,
+                0 0 40px #00ff55,
+                0 0 70px #00ff55;
+            }
+          }
+        </style>
+        
+        <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6 text-center sm:text-left w-full">
+          <!-- Judul -->
+          <div class="w-full sm:w-auto">
+            <h1 class="text-3xl font-extrabold tracking-wide">
+              <!-- Desktop -->
+              <span class="hidden sm:inline text-[#39ff14] ">
+                Ladang Woh Ijo
+              </span>
+              <!-- Mobile -->
+              <span class="inline sm:hidden text-[#39ff14]">
+                Ladang Woh Ijo
+              </span>
+            </h1>
+            <p class="text-sm text-slate-300 mt-1">Realtime monitoring</p>
+          </div>
+          
+           <!-- Kontrol kanan -->
+          <div class="flex items-center justify-center sm:justify-end gap-3 w-full sm:w-auto">
+            <!-- Label disembunyikan di mobile -->
+            <label class="hidden sm:inline text-sm text-slate-300">Select GH</label>
+        
+            <select
+              id="ghSelect"
+              class="rounded bg-slate-800 px-3 py-2 focus:ring-2 focus:ring-indigo-500 transition w-full sm:w-auto">
+              <option>GH-A</option>
+              <option>GH-B</option>
+              <option>GH-C</option>
+              <option>GH-D</option>
+              <option>GH-E</option>
+              <option>GH-F</option>
+              <option>GH-G</option>
+              <option>GH-H</option>
+              <option>GH-I</option>
+              <option>GH-J</option>
+              <option>GH-K</option>
+              <option>GH-L</option>
+            </select>
+        
+            <button
+              id="btnRefresh"
+              class="px-3 py-2 bg-[#39ff14] hover:bg-[#32cc11] text-black font-semibold rounded shadow-[0_0_8px_rgba(99,102,241,0.7)] transition w-full sm:w-auto">
+              Refresh
+            </button>
+           
+          </div>
+        </header>
+
+
+
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <!-- Left: Summary + Controls -->
+      <section class="glass p-4 rounded-lg shadow-md col-span-1 lg:col-span-1 bg-slate-900/60 border border-slate-700">
+  <div class="flex flex-col gap-6">
+    
+    <!-- ESP32 Status -->
+    <div id="espStatus" 
+         class="flex items-center justify-between px-4 py-3 rounded-lg text-sm font-semibold bg-slate-800 border border-slate-700 shadow-inner">
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-yellow-400 animate-pulse" id="statusDot"></span>
+        <span>🔄 Checking ESP32 status...</span>
+      </span>
+    </div>
+
+    <!-- Latest Readings -->
+    <div>
+      <h2 class="font-semibold text-lg text-emerald-400">📊 Latest Readings</h2>
+      <div id="latestCards" class="mt-3 grid grid-cols-2 gap-3"></div>
+    </div>
+
+    <!-- Actions -->
+    <div>
+      <h2 class="font-semibold text-lg text-indigo-400">⚙️ Actions</h2>
+      <div class="mt-3 flex flex-col sm:flex-row gap-3">
+        <button id="btnAddSchedule" 
+                class="flex-1 px-3 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-medium shadow hover:shadow-emerald-500/40 transition-all">
+          ➕ Add Jadwal
+        </button>
+        <button id="btnClearSchedules" 
+                class="flex-1 px-3 py-2 bg-red-600 hover:bg-red-700 rounded-lg font-medium shadow hover:shadow-red-500/40 transition-all">
+          🗑️ Delete All Jadwal (GH)
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div>
+      <h2 class="font-semibold text-lg text-cyan-400">🔍 Filter</h2>
+      <div class="mt-3">
+        <label class="block text-sm text-slate-300">Start</label>
+        <input id="startDate" type="datetime-local" class="w-full mt-1 p-2 rounded-lg bg-slate-800 border border-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none" />
+
+        <label class="block text-sm text-slate-300 mt-3">End</label>
+        <input id="endDate" type="datetime-local" class="w-full mt-1 p-2 rounded-lg bg-slate-800 border border-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none" />
+
+        <div class="grid grid-cols-3 gap-2 mt-4">
+          <button id="btnApplyRange" 
+                  class="px-3 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-medium shadow hover:shadow-indigo-500/40 transition-all">
+            Filter
+          </button>
+          <button id="btnClearFilter" 
+                  class="px-3 py-2 bg-slate-600 hover:bg-slate-700 rounded-lg font-medium shadow transition-all">
+            Clear
+          </button>
+          <button id="btnExportCSV" 
+                  class="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-medium shadow hover:shadow-emerald-500/40 transition-all">
+            Export
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- Middle: Chart -->
+      <section class="glass p-4 rounded col-span-1 lg:col-span-2">
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="font-semibold">History Chart</h2>
+          <div class="text-sm text-slate-300">Shows PPM · pH · Suhu · Kelembapan</div>
+        </div>
+        <div class="max-w-4xl mx-auto">
+  <!-- Tabs -->
+  <div class="flex justify-center mb-4 gap-2">
+    <button class="tab-btn active-tab" data-type="ppm">PPM</button>
+    <button class="tab-btn" data-type="ph">pH</button>
+    <button class="tab-btn" data-type="suhu">Suhu</button>
+    <button class="tab-btn" data-type="kelembapan">Kelembapan</button>
+  </div>
+
+  <!-- Chart Area -->
+  <div class="bg-gray-900 p-4 rounded-2xl shadow-lg h-[400px]">
+    <canvas id="historyChart"></canvas>
+  </div>
+</div>
+
+        <div class="mt-4">
+          <h3 class="font-medium">Entries (latest first)</h3>
+          <div id="historyList" class="mt-2 max-h-44 overflow-auto"></div>
+        </div>
+      </section>
+      
+      <!-- === KONTROL PERANGKAT === -->
+        <section class="glass p-4 rounded col-span-1 lg:col-span-1">
+          <div class="p-4 bg-slate-800 rounded">
+            <h2 class="text-lg font-semibold mb-2">Pompa A</h2>
+            <div class="flex items-center gap-2 mb-3">
+              <label class="text-sm">Durasi (detik):</label>
+              <input id="durasi-pompaA" type="number" value="10" min="1"
+                class="w-24 p-1 bg-slate-700 rounded text-center text-white" />
+            </div>
+            <button id="on-pompaA" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">ON</button>
+            <button id="off-pompaA" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">OFF</button>
+            <div id="status-pompaA" class="mt-3 text-slate-300 text-sm">Status: <span class="font-semibold">OFF</span></div>
+            <div id="log-pompaA" class="mt-3 text-slate-300 text-sm">Log On: <span class="font-semibold">-</span></div>
+          </div>
+        </section>
+        
+        <section class="glass p-4 rounded col-span-1 lg:col-span-1">
+          <div class="p-4 bg-slate-800 rounded">
+            <h2 class="text-lg font-semibold mb-2">Pompa B</h2>
+            <div class="flex items-center gap-2 mb-3">
+              <label class="text-sm">Durasi (detik):</label>
+              <input id="durasi-pompaB" type="number" value="10" min="1"
+                class="w-24 p-1 bg-slate-700 rounded text-center text-white" />
+            </div>
+            <button id="on-pompaB" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">ON</button>
+            <button id="off-pompaB" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">OFF</button>
+            <div id="status-pompaB" class="mt-3 text-slate-300 text-sm">Status: <span class="font-semibold">OFF</span></div>
+            <div id="log-pompaB" class="mt-3 text-slate-300 text-sm">Log On: <span class="font-semibold">-</span></div>
+          </div>
+        </section>
+        
+        <section class="glass p-4 rounded col-span-1 lg:col-span-1">
+          <div class="p-4 bg-slate-800 rounded">
+            <h2 class="text-lg font-semibold mb-2">Pompa C</h2>
+            <div class="flex items-center gap-2 mb-3">
+              <label class="text-sm">Durasi (detik):</label>
+              <input id="durasi-pompaC" type="number" value="10" min="1"
+                class="w-24 p-1 bg-slate-700 rounded text-center text-white" />
+            </div>
+            <button id="on-pompaC" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">ON</button>
+            <button id="off-pompaC" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">OFF</button>
+            <div id="status-pompaC" class="mt-3 text-slate-300 text-sm">Status: <span class="font-semibold">OFF</span></div>
+            <div id="log-pompaC" class="mt-3 text-slate-300 text-sm">Log On: <span class="font-semibold">-</span></div>
+          </div>
+        </section>
+        
+        <section class="glass p-4 rounded col-span-1 lg:col-span-1">
+          <div class="p-4 bg-slate-800 rounded">
+            <h2 class="text-lg font-semibold mb-2">Pompa D</h2>
+            <div class="flex items-center gap-2 mb-3">
+              <label class="text-sm">Durasi (detik):</label>
+              <input id="durasi-pompaD" type="number" value="10" min="1"
+                class="w-24 p-1 bg-slate-700 rounded text-center text-white" />
+            </div>
+            <button id="on-pompaD" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">ON</button>
+            <button id="off-pompaD" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">OFF</button>
+            <div id="status-pompaD" class="mt-3 text-slate-300 text-sm">Status: <span class="font-semibold">OFF</span></div>
+            <div id="log-pompaD" class="mt-3 text-slate-300 text-sm">Log On: <span class="font-semibold">-</span></div>
+          </div>
+        </section>
+        
+        <section class="glass p-4 rounded col-span-1 lg:col-span-1">
+          <div class="p-4 bg-slate-800 rounded">
+            <h2 class="text-lg font-semibold mb-2">Kipas</h2>
+            <div class="flex items-center gap-2 mb-3">
+              <label class="text-sm">Durasi (detik):</label>
+              <input id="durasi-kipas" type="number" value="10" min="1"
+                class="w-24 p-1 bg-slate-700 rounded text-center text-white" />
+            </div>
+            <button id="on-kipas" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">ON</button>
+            <button id="off-kipas" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">OFF</button>
+            <div id="status-kipas" class="mt-3 text-slate-300 text-sm">Status: <span class="font-semibold">OFF</span></div>
+            <div id="log-kipas" class="mt-3 text-slate-300 text-sm">Log On: <span class="font-semibold">-</span></div>
+          </div>
+        </section>
+        
+        <section class="glass p-4 rounded col-span-1 lg:col-span-1">
+          <div class="p-4 bg-slate-800 rounded">
+            <h2 class="text-lg font-semibold mb-2">Lampu</h2>
+            <div class="flex items-center gap-2 mb-3">
+              <label class="text-sm">Durasi (detik):</label>
+              <input id="durasi-lampu" type="number" value="10" min="1"
+                class="w-24 p-1 bg-slate-700 rounded text-center text-white" />
+            </div>
+            <button id="on-lampu" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">ON</button>
+            <button id="off-lampu" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-white">OFF</button>
+            <div id="status-lampu" class="mt-3 text-slate-300 text-sm">Status: <span class="font-semibold">OFF</span></div>
+            <div id="log-lampu" class="mt-3 text-slate-300 text-sm">Log On: <span class="font-semibold">-</span></div>
+          </div>
+        </section>
+
+      <!-- Bottom: Jadwal Table -->
+		<section class="glass p-4 rounded col-span-1 lg:col-span-3">
+		  <div class="flex items-center justify-between">
+			<h2 class="font-semibold">Jadwal</h2>
+			<div class="text-sm text-slate-300">CRUD jadwal per GH</div>
+		  </div>
+		  <div class="mt-4 overflow-auto">
+			<table id="jadwalTable" class="min-w-full table-auto text-left">
+			  <thead class="text-slate-300 text-sm">
+				<tr>
+				  <th class="px-3 py-2">Usia</th>
+				  <th class="px-3 py-2">Tanggal</th>
+				  <th class="px-3 py-2">Jam</th>
+				  <th class="px-3 py-2">PPM</th>
+				  <th class="px-3 py-2">pH</th>
+				  <th class="px-3 py-2">Suhu</th>
+				  <th class="px-3 py-2">Kelembapan</th>
+				  <!--<th class="px-3 py-2">Lokasi</th>-->
+				  <th class="px-3 py-2">Aksi</th>
+				</tr>
+			  </thead>
+			  
+
+			  <tbody id="jadwalBody" class="text-sm"></tbody>
+			</table>
+		  </div>
+
+		  <!-- Import Excel -->
+			<div class="mt-4 flex flex-wrap items-center gap-3 bg-slate-800/60 p-3 rounded-xl shadow-inner">
+              <label 
+                for="excelFile"
+                class="cursor-pointer px-3 py-2 bg-slate-700 hover:bg-slate-600 
+                       rounded-md text-sm text-slate-200 transition shadow-[0_0_6px_rgba(148,163,184,0.3)]">
+                Pilih File Excel
+              </label>
+              
+              <input id="excelFile" type="file" accept=".xlsx, .xls" class="hidden" />
+            
+              <button id="btnImportExcel"
+                class="px-4 py-2 text-sm font-semibold rounded-md 
+                       bg-emerald-500 hover:bg-emerald-400 text-white 
+                       shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse-slow transition">
+                📥 Import dari Excel
+              </button>
+            </div>
+            
+            <style>
+            @keyframes pulse-slow {
+              0%, 100% { box-shadow: 0 0 8px rgba(16,185,129,0.6); }
+              50% { box-shadow: 0 0 16px rgba(16,185,129,0.9); }
+            }
+            .animate-pulse-slow {
+              animation: pulse-slow 2.5s infinite ease-in-out;
+            }
+            </style>
+
+
+		  
+		  <!-- Pagination controls -->
+		  <div class="flex justify-between items-center mt-3 text-sm">
+			<div id="pageInfo" class="text-slate-400">Page 1 / 1</div>
+			<div class="flex gap-2">
+			  <button id="prevPage" class="px-3 py-1 bg-slate-700 rounded disabled:opacity-40">Prev</button>
+			  <button id="nextPage" class="px-3 py-1 bg-slate-700 rounded disabled:opacity-40">Next</button>
+			</div>
+		  </div>
+		</section>
+    </main>
+  </div>
+
+  <!-- Modal (Add/Edit Schedule) -->
+  <div id="modal" class="fixed inset-0 flex items-center justify-center hidden">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative w-full max-w-lg bg-slate-900 rounded p-6 z-10">
+      <h3 id="modalTitle" class="text-lg font-semibold">Tambah Jadwal</h3>
+      <div class="mt-3 grid grid-cols-2 gap-3">
+        <input id="mTanggal" type="date" class="p-2 bg-slate-800 rounded" />
+        <input id="mJam" type="time" class="p-2 bg-slate-800 rounded" />
+        <input id="mPPM" type="number" placeholder="PPM" class="p-2 bg-slate-800 rounded" />
+        <input id="mPH" step="0.1" type="number" placeholder="pH" class="p-2 bg-slate-800 rounded" />
+        <input id="mSuhu" step="0.1" type="number" placeholder="Suhu" class="p-2 bg-slate-800 rounded" />
+        <input id="mKele" type="number" placeholder="Kelembapan" class="p-2 bg-slate-800 rounded" />
+        <input id="mLok" type="text" placeholder="Lokasi" class="p-2 bg-slate-800 rounded" />
+        <input id="mUsia" type="number" placeholder="Usia" class="p-2 bg-slate-800 rounded" />
+      </div>
+      <div class="mt-4 flex justify-end gap-2">
+        <button id="btnCancel" class="px-3 py-2 bg-slate-700 rounded">Cancel</button>
+        <button id="btnSave" class="px-3 py-2 bg-green-600 rounded">Save</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/monitoring/sw.js")
+        .then(() => console.log("✅ Service Worker terdaftar"))
+        .catch(err => console.error("❌ SW gagal:", err));
+    }
+
+// ---------------------------
+// === CONFIGURE THIS PART ===
+// ---------------------------
+const firebaseConfig = {
+  apiKey: "REPLACE_APIKEY",
+  authDomain: "REPLACE_AUTHDOMAIN",
+  databaseURL: "https://temperature-cca1c-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "REPLACE_PROJECTID",
+  storageBucket: "REPLACE_BUCKET",
+  messagingSenderId: "REPLACE_MSG",
+  appId: "REPLACE_APPID"
+};
+// ---------------------------
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// UI elements
+const ghSelect = document.getElementById('ghSelect');
+const btnRefresh = document.getElementById('btnRefresh');
+const latestCards = document.getElementById('latestCards');
+const jadwalBody = document.getElementById('jadwalBody');
+const historyList = document.getElementById('historyList');
+const btnAddSchedule = document.getElementById('btnAddSchedule');
+const modal = document.getElementById('modal');
+const btnCancel = document.getElementById('btnCancel');
+const btnSave = document.getElementById('btnSave');
+const modalTitle = document.getElementById('modalTitle');
+const startDate = document.getElementById('startDate');
+const endDate = document.getElementById('endDate');
+const btnApplyRange = document.getElementById('btnApplyRange');
+const btnClearFilter = document.getElementById('btnClearFilter');
+const btnExportCSV = document.getElementById('btnExportCSV');
+
+// modal inputs
+const mTanggal = document.getElementById('mTanggal');
+const mJam = document.getElementById('mJam');
+const mPPM = document.getElementById('mPPM');
+const mPH = document.getElementById('mPH');
+const mSuhu = document.getElementById('mSuhu');
+const mKele = document.getElementById('mKele');
+const mLok = document.getElementById('mLok');
+const mUsia = document.getElementById('mUsia');
+
+let editingId = null;
+let historyChart = null;
+
+// --- Pagination variables ---
+let jadwalDataAll = [];
+let currentPage = 1;
+const itemsPerPage = 5;
+
+// === MODAL ===
+function showModal(editId=null, data=null){
+  editingId = editId;
+  modalTitle.textContent = editId ? 'Edit Jadwal' : 'Tambah Jadwal';
+  if(data){
+    mTanggal.value = data.tanggal || '';
+    mJam.value = data.jam || '';
+    mPPM.value = data.ppm || '';
+    mPH.value = data.ph || '';
+    mSuhu.value = data.suhu || '';
+    mKele.value = data.kelembapan || '';
+    mLok.value = data.lokasi || '';
+    mUsia.value = data.usia || '';
+  } else {
+    mTanggal.value = '';
+    mJam.value = '';
+    mPPM.value = '';
+    mPH.value = '';
+    mSuhu.value = '';
+    mKele.value = '';
+    mLok.value = '';
+    mUsia.value = '';
+  }
+  modal.classList.remove('hidden');
+}
+function hideModal(){ modal.classList.add('hidden'); editingId = null; }
+
+btnCancel.addEventListener('click', hideModal);
+btnAddSchedule.addEventListener('click', ()=> showModal());
+
+btnSave.addEventListener('click', async ()=>{
+  const gh = ghSelect.value;
+  const payload = {
+    jam: mJam.value,
+    tanggal: mTanggal.value,
+    ppm: parseFloat(mPPM.value)||0,
+    ph: parseFloat(mPH.value)||0,
+    suhu: parseFloat(mSuhu.value)||0,
+    kelembapan: parseFloat(mKele.value)||0,
+    usia: parseFloat(mUsia.value)||0,
+    lokasi: mLok.value || ''
+  };
+  if(editingId){
+    await db.ref(`/greenhouse/${gh}/jadwal/${editingId}`).update(payload);
+  } else {
+    await db.ref(`/greenhouse/${gh}/jadwal`).push(payload);
+  }
+  hideModal();
+  loadAll();
+});
+
+btnRefresh.addEventListener('click', ()=> loadAll());
+btnApplyRange.addEventListener('click', ()=> loadHistory());
+
+// === MAIN LOAD ===
+async function loadAll(){
+  const gh = ghSelect.value;
+  const jadwalSnap = await db.ref(`/greenhouse/${gh}/jadwal`).get();
+  const jadwal = jadwalSnap.exists() ? jadwalSnap.val() : {};
+  renderJadwal(jadwal);
+  const histSnap = await db.ref(`/greenhouse/${gh}/report/history`).orderByKey().limitToLast(1).get();
+  let latest = null;
+  if(histSnap.exists()){
+    const v = histSnap.val();
+    const k = Object.keys(v).pop();
+    latest = v[k];
+  }
+  renderLatest(latest, jadwal);
+  await loadHistory();
+  setupControls(ghSelect.value);
+  startEspStatusListener();
+  
+}
+
+
+
+
+
+function renderLatest(latest, jadwalList = {}) {
+  latestCards.innerHTML = '';
+  if (!latest) {
+    latestCards.innerHTML = '<div class="col-span-2 text-slate-400">No history yet</div>';
+    return;
+  }
+
+  // Ambil tanggal hari ini (format YYYY-MM-DD)
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const todayStr = `${yyyy}-${mm}-${dd}`;
+
+
+  // --- Cari jadwal dengan tanggal hari ini ---
+  let usiaToday = '-';
+  //let lastUpdate='-';
+  let matchedJadwal = null;
+  if (jadwalList && Object.keys(jadwalList).length > 0) {
+    Object.entries(jadwalList).forEach(([id, j]) => {
+      //  console.log("📦 Cek jadwal:", id, j.tanggal, j.usia);
+      const tgl = (j.tanggal || '').trim(); // hilangkan spasi
+      if (tgl.startsWith(todayStr) && j.usia != null) {
+        matchedJadwal = j;
+      }
+    });
+    
+
+    if (matchedJadwal && matchedJadwal.usia != null) {
+      usiaToday = matchedJadwal.usia;
+    } else {
+      // fallback → ambil usia dari jadwal terakhir
+      const sorted = Object.values(jadwalList).sort((a, b) => (a.tanggal > b.tanggal ? 1 : -1));
+      const last = sorted[sorted.length - 1];
+      if (last && last.usia != null) usiaToday = last.usia;
+    }
+  }
+
+  //console.log("🧩 Usia ditemukan:", usiaToday);
+
+  // --- Data yang ingin ditampilkan ---
+  // Konversi waktu ke WIB dan format rapi
+    let lastUpdate = "-";
+    if (latest.tanggaljam) {
+      const d = new Date(latest.tanggaljam);
+      const wibDate = new Date(d.getTime() + 7 * 60 * 60 * 1000);
+      lastUpdate = d.toLocaleString("id-ID", {
+        day: "2-digit",
+        month: "short",
+       // year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        //second: "2-digit",
+        hour12: false
+      }).replace(/\./g, ":");
+    }
+    
+    // if (latest.tanggaljam) {
+    //   const d = new Date(latest.tanggaljam);
+    //   const wibDate = new Date(d.getTime() + 7 * 60 * 60 * 1000);
+    //   lastUpdate = wibDate.toLocaleTimeString("id-ID", {
+    //     hour: "2-digit",
+    //     minute: "2-digit",
+    //     hour12: false
+    //   }).replace(/\./g, ":") + " WIB";
+    // }
+    
+    // Susunan items
+    const items = [
+      { t: "PPM", v: latest.ppm },
+      { t: "pH", v: latest.ph },
+      { t: "Suhu (°C)", v: latest.suhu },
+      { t: "Kelembapan (%)", v: latest.kelembapan },
+      { t: "Usia (Hst)", v: usiaToday },
+      { t: "Last Update", v: lastUpdate }
+    ];
+
+
+  // --- Render kartu ---
+  items.forEach(it => {
+    const val = it.v ?? '-';
+    const card = document.createElement('div');
+    card.className = 'p-3 rounded bg-slate-800 text-center';
+    card.innerHTML = `
+      <div class="text-sm text-slate-300">${it.t}</div>
+      <div class="text-xl font-bold">${val}</div>
+    `;
+    latestCards.appendChild(card);
+  });
+}
+
+
+
+// === RENDER JADWAL (with pagination) ===
+function renderJadwal(jadwal){
+  jadwalDataAll = jadwal ? Object.entries(jadwal).reverse() : [];
+  currentPage = 1;
+  renderPagedJadwal();
+}
+
+function renderPagedJadwal(){
+  jadwalBody.innerHTML = '';
+  const totalPages = Math.max(1, Math.ceil(jadwalDataAll.length / itemsPerPage));
+  const start = (currentPage - 1) * itemsPerPage;
+  const pageItems = jadwalDataAll.slice(start, start + itemsPerPage);
+
+  pageItems.forEach(([id, item]) => {
+  const tr = document.createElement('tr');
+  tr.className = "border-b border-slate-700 hover:bg-slate-800/40 transition"; // Tambah efek hover agar tabel hidup
+
+  tr.innerHTML = `
+    <td class="px-3 py-2 align-top">${item.usia || ''}</td>
+    <td class="px-3 py-2 align-top">${item.tanggal || ''}</td>
+    <td class="px-3 py-2 align-top">${item.jam || ''}</td>
+    <td class="px-3 py-2 align-top">${item.ppm || ''}</td>
+    <td class="px-3 py-2 align-top">${item.ph || ''}</td>
+    <td class="px-3 py-2 align-top">${item.suhu || ''}</td>
+    <td class="px-3 py-2 align-top">${item.kelembapan || ''}</td>
+    
+    <td class="px-3 py-2 text-center align-middle">
+  <div class="flex items-center justify-center gap-2">
+    <button data-id="${id}"
+      class="editBtn px-3 py-1.5 text-xs font-semibold rounded-md 
+             bg-indigo-600 hover:bg-indigo-500 text-white 
+             shadow-[0_0_6px_rgba(99,102,241,0.7)] transition">
+      Edit
+    </button>
+    <button data-id="${id}"
+      class="delBtn px-3 py-1.5 text-xs font-semibold rounded-md 
+             bg-red-600 hover:bg-red-500 text-white 
+             shadow-[0_0_6px_rgba(239,68,68,0.7)] transition">
+      Delete
+    </button>
+  </div>
+</td>
+
+  `;
+
+  jadwalBody.appendChild(tr);
+});
+
+
+  document.getElementById('pageInfo').textContent = `Page ${currentPage} / ${totalPages}`;
+  document.getElementById('prevPage').disabled = currentPage === 1;
+  document.getElementById('nextPage').disabled = currentPage === totalPages;
+
+  // Attach handlers
+  document.querySelectorAll('.editBtn').forEach(b=> b.addEventListener('click', async (e)=>{
+    const id = e.target.dataset.id;
+    const gh = ghSelect.value;
+    const snap = await db.ref(`/greenhouse/${gh}/jadwal/${id}`).get();
+    showModal(id, snap.val());
+  }));
+  document.querySelectorAll('.delBtn').forEach(b=> b.addEventListener('click', async (e)=>{
+    const id = e.target.dataset.id;
+    const gh = ghSelect.value;
+    if(confirm('Hapus jadwal ini?')){
+      await db.ref(`/greenhouse/${gh}/jadwal/${id}`).remove();
+      loadAll();
+    }
+  }));
+}
+
+// === PAGINATION BUTTON EVENTS ===
+document.getElementById('prevPage').addEventListener('click', ()=>{
+  if(currentPage > 1){
+    currentPage--;
+    renderPagedJadwal();
+  }
+});
+
+document.getElementById('nextPage').addEventListener('click', ()=>{
+  const totalPages = Math.max(1, Math.ceil(jadwalDataAll.length / itemsPerPage));
+  if(currentPage < totalPages){
+    currentPage++;
+    renderPagedJadwal();
+  }
+});
+
+// === HISTORY ===
+let currentFiltered = [];
+
+    async function loadHistory() {
+      const gh = ghSelect.value;
+    
+      // Ambil input waktu dari datepicker (anggap waktu lokal/WIB)
+      let s = startDate.value ? new Date(startDate.value) : null;
+      let e = endDate.value ? new Date(endDate.value) : null;
+    
+      // Jika user hanya isi tanggal tanpa jam
+      if (s && startDate.value.length === 10) s.setHours(0, 0, 0, 0);
+      if (e && endDate.value.length === 10) e.setHours(23, 59, 59, 999);
+    
+      // Fungsi bantu: ubah Date ke string "YYYY-MM-DDTHH:mm:ss"
+      const pad = n => n.toString().padStart(2, "0");
+      const toLocalString = d =>
+        `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(
+          d.getHours()
+        )}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    
+      // Konversi ke waktu WIB (UTC+7)
+      const toWIB = d => new Date(d.getTime() - 7 * 60 * 60 * 1000);
+    
+      const sWib = s ? toWIB(s) : null;
+      const eWib = e ? toWIB(e) : null;
+    
+      const sLocal = sWib ? toLocalString(sWib) : null;
+      const eLocal = eWib ? toLocalString(eWib) : null;
+    
+      // Ambil data dari Firebase
+      const snap = await db.ref(`/greenhouse/${gh}/report/history`).orderByKey().get();
+      const data = snap.exists() ? snap.val() : {};
+    
+      // Ubah ke array & urutkan
+      const arr = Object.entries(data)
+        .map(([k, v]) => ({ k, ...v }))
+        .sort((a, b) => b.k.localeCompare(a.k));
+    
+      // Filter waktu sesuai WIB
+      currentFiltered = arr
+        .filter(item => {
+          const t = (item.tanggaljam || item.k || "").slice(0, 19);
+          if (!t) return false;
+          if (sLocal && t < sLocal) return false;
+          if (eLocal && t > eLocal) return false;
+          return true;
+        })
+        .slice(0, 500)
+        .reverse();
+    
+      renderHistoryList(currentFiltered);
+      plotChart(currentFiltered);
+    }
+
+
+
+// === CLEAR FILTER & EXPORT CSV ===
+btnClearFilter.addEventListener("click", () => {
+  startDate.value = "";
+  endDate.value = "";
+  loadHistory();
+});
+
+btnExportCSV.addEventListener("click", () => {
+  const dataToExport = currentFiltered.length ? currentFiltered : [];
+  if (!dataToExport.length) {
+    alert("Tidak ada data untuk diexport.");
+    return;
+  }
+  const header = Object.keys(dataToExport[0]).join(",");
+  const rows = dataToExport.map(obj => Object.values(obj).join(","));
+  const csvContent = [header, ...rows].join("\n");
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.setAttribute("href", url);
+  link.setAttribute("download", "history_export.csv");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+function renderHistoryList(list) {
+  historyList.innerHTML = '';
+  if (!list.length) {
+    historyList.innerHTML = '<div class="text-slate-400">No history</div>';
+    return;
+  }
+
+  list.slice().reverse().forEach(item => {
+    const d = document.createElement('div');
+    d.className = 'p-2 border-b border-slate-700 text-sm';
+
+    // Konversi ke WIB dan ubah ke format tanggal lokal
+    let waktuWIB = '-';
+    if (item.tanggaljam) {
+      const utcDate = new Date(item.tanggaljam);
+      const wibDate = new Date(utcDate.getTime() + 7 * 60 * 60 * 1000);
+
+      const options = {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      };
+
+      waktuWIB = utcDate
+        .toLocaleString('id-ID', options)
+        .replace('.', ':')
+        .replace('pukul', '')
+        .trim()
+        + ' WIB';
+    }
+
+    d.innerHTML = `
+      <div class="flex justify-between">
+        <div>${waktuWIB}</div>
+        <div>${item.lokasi || ''}</div>
+      </div>
+      <div class="text-slate-300">
+        PPM: ${item.ppm} · pH: ${item.ph} · Suhu: ${item.suhu}°C · Kelembapan: ${item.kelembapan}%
+      </div>
+    `;
+
+    historyList.appendChild(d);
+  });
+}
+
+
+function plotChart(list) {
+  // Konversi label waktu ke WIB dan ubah ke format jam:menit
+  const labels = list.map(i => {
+    const utc = i.tanggaljam || i.k;
+    if (!utc) return "-";
+    const date = new Date(utc);
+    const wibDate = new Date(date.getTime() + 7 * 60 * 60 * 1000);
+    return wibDate.toLocaleString('id-ID', {
+      day: '2-digit',
+      month: 'short',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    }) + ' WIB';
+  });
+
+  const ppm = list.map(i => i.ppm || null);
+  const ph = list.map(i => i.ph || null);
+  const suhu = list.map(i => i.suhu || null);
+  const kele = list.map(i => i.kelembapan || null);
+
+  const ctx = document.getElementById('historyChart').getContext('2d');
+  if (historyChart) historyChart.destroy();
+
+  historyChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+    datasets: [
+  {
+    label: 'PPM',
+    data: ppm,
+    borderColor: 'rgba(0, 255, 255, 1)',        // neon cyan
+    backgroundColor: 'rgba(0, 255, 255, 0.15)',
+    tension: 0.35,
+    borderWidth: 2,
+    fill: true
+  },
+  {
+    label: 'pH',
+    data: ph,
+    borderColor: 'rgba(255, 0, 255, 1)',        // neon magenta
+    backgroundColor: 'rgba(255, 0, 255, 0.15)',
+    tension: 0.35,
+    borderWidth: 2,
+    fill: true
+  },
+  {
+    label: 'Suhu (°C)',
+    data: suhu,
+    borderColor: 'rgba(255, 99, 71, 1)',        // neon orange/red
+    backgroundColor: 'rgba(255, 99, 71, 0.15)',
+    tension: 0.35,
+    borderWidth: 2,
+    fill: true
+  },
+  {
+    label: 'Kelembapan (%)',
+    data: kele,
+    borderColor: 'rgba(250, 255, 0, 1)',        // neon yellow
+    backgroundColor: 'rgba(250, 255, 0, 0.15)',
+    tension: 0.35,
+    borderWidth: 2,
+    fill: true
+  }
+]
+
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: { color: '#e5e7eb' } // teks legenda warna abu muda
+        },
+        tooltip: {
+          backgroundColor: '#1f2937',
+          titleColor: '#f9fafb',
+          bodyColor: '#f3f4f6',
+          borderWidth: 1,
+          borderColor: '#374151',
+          callbacks: {
+            title: function (tooltipItems) {
+              return tooltipItems[0].label; // sudah dalam format WIB
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#cbd5e1' },
+          title: { display: true, text: 'Waktu (WIB)', color: '#94a3b8' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        },
+        y: {
+          ticks: { color: '#cbd5e1' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        }
+      }
+    }
+  });
+}
+
+
+
+// CLEAR ALL JADWAL
+const btnClearSchedules = document.getElementById('btnClearSchedules');
+btnClearSchedules.addEventListener('click', async ()=>{
+  const gh = ghSelect.value;
+  if(confirm('Hapus semua jadwal untuk '+gh+'?')){
+    await db.ref(`/greenhouse/${gh}/jadwal`).remove();
+    loadAll();
+  }
+});
+
+// === IMPORT EXCEL ===
+document.getElementById("btnImportExcel").addEventListener("click", async () => {
+  const fileInput = document.getElementById("excelFile");
+  const gh = ghSelect.value;
+
+  if (!fileInput.files.length) {
+    alert("Pilih file Excel terlebih dahulu!");
+    return;
+  }
+
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    const data = new Uint8Array(e.target.result);
+    const workbook = XLSX.read(data, { type: "array" });
+    const sheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[sheetName];
+    const jsonData = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+
+    if (!jsonData.length) {
+      alert("File Excel kosong atau tidak terbaca!");
+      return;
+    }
+
+    const updates = {};
+    jsonData.forEach((row) => {
+      const id = db.ref().push().key;
+      const item = {
+        tanggal: row.tanggal || "",
+        jam: row.jam || "",
+        ppm: parseFloat(row.ppm) || 0,
+        ph: parseFloat(row.ph) || 0,
+        suhu: parseFloat(row.suhu) || 0,
+        kelembapan: parseFloat(row.kelembapan) || 0,
+        usia: parseFloat(row.usia) || 0,
+        lokasi: row.lokasi || "",
+      };
+      updates[`/greenhouse/${gh}/jadwal/${id}`] = item;
+    });
+
+    // 🔥 Hapus data lama dulu
+    await db.ref(`/greenhouse/${gh}/jadwal`).remove();
+    await db.ref(`/greenhouse/${gh}/report/history`).remove();
+
+    // Lalu upload data baru
+    await db.ref().update(updates);
+
+    alert(`✅ Berhasil import ${jsonData.length} data ke ${gh}`);
+    loadAll();
+  };
+  reader.readAsArrayBuffer(file);
+});
+
+
+// === REALTIME UPDATE ===
+function listenRealtime() {
+  const gh = ghSelect.value;
+  const ref = db.ref(`/greenhouse/${gh}/report/history`);
+
+  // Hapus listener lama dulu biar tidak dobel
+  ref.off();
+
+  // Dengarkan perubahan realtime
+  ref.limitToLast(1).on('value', (snapshot) => {
+    const val = snapshot.val();
+    if (val) {
+      const k = Object.keys(val).pop();
+      const latest = val[k];
+      renderLatest(latest); // update card
+      loadHistory();        // update chart & list
+      loadAll();
+    }
+  });
+
+  // Dengarkan juga perubahan jadwal secara realtime
+  const jadwalRef = db.ref(`/greenhouse/${gh}/jadwal`);
+  jadwalRef.off();
+  jadwalRef.on('value', (snap) => {
+    const jadwal = snap.exists() ? snap.val() : {};
+    renderJadwal(jadwal);
+  });
+}
+
+// daftar semua perangkat
+const devices = ["pompaA", "pompaB", "pompaC", "pompaD", "kipas", "lampu"];
+
+// fungsi untuk inisialisasi kontrol tiap device
+function setupControls(gh) {
+  devices.forEach(device => {
+    const durasiInput = document.getElementById(`durasi-${device}`);
+    const btnOn = document.getElementById(`on-${device}`);
+    const btnOff = document.getElementById(`off-${device}`);
+    const statusEl = document.getElementById(`status-${device}`);
+    const logEl = document.getElementById(`log-${device}`);
+
+    if (!durasiInput || !btnOn || !btnOff || !statusEl) return;
+
+    // referensi Firebase
+    const ref = db.ref(`/greenhouse/${gh}/control/${device}`);
+
+    // realtime listener
+    ref.on("value", snap => {
+      if (!snap.exists()) return;
+      const data = snap.val();
+      statusEl.innerHTML = `Status: <span class="font-semibold">${data.status || "OFF"}</span>`;
+      if (data.startAt) {
+          const utcDate = new Date(data.startAt);
+          // konversi ke WIB (UTC+7)
+          const wibDate = new Date(utcDate.getTime() + 7 * 60 * 60 * 1000);
+          
+          // format biar rapi, misal: 14-10-2025 09:15:00
+          const formatted = utcDate.toLocaleString("id-ID", {
+            timeZone: "Asia/Jakarta",
+            hour12: false
+          });
+        
+          logEl.innerHTML = `Log On: <span class="font-semibold">${formatted}</span>`;
+        } else {
+          logEl.innerHTML = `Log On: <span class="font-semibold">-</span>`;
+        }
+     // logEl.innerHTML = `Log On: <span class="font-semibold">${data.startAt || "-"}</span>`;
+    });
+
+    // tombol ON ditekan
+    btnOn.onclick = async () => {
+      const durasi = parseInt(durasiInput.value || "0");
+      const now = new Date().toISOString();
+      await ref.set({
+        status: "ON",
+        durasi: durasi,
+        startAt: now
+      });
+    };
+
+    // tombol OFF ditekan
+    btnOff.onclick = async () => {
+        const now = new Date().toISOString();
+      await ref.update({
+        status: "OFF",
+        finishedAt: now
+      });
+    };
+  });
+}
+
+const notifContainer = document.createElement("div");
+notifContainer.className = "fixed top-4 right-4 z-50 flex flex-col gap-2";
+document.body.appendChild(notifContainer);
+
+// === Tambahkan fungsi ini di atas script bagian bawah ===
+function toWIB(dateStr) {
+  const d = new Date(dateStr);
+  if (isNaN(d)) return dateStr;
+  // tambahkan offset 7 jam
+  d.setHours(d.getHours() + 7);
+  return d.toISOString().slice(0, 19).replace('T', ' ');
+}
+
+
+ghSelect.addEventListener('change', () => {
+  listenRealtime();
+  loadHistory(); // untuk memuat ulang grafik awal
+  loadAll();
+  const gh = ghSelect.value;
+  setupControls(gh);
+});
+
+
+// === NOTIFIKASI TOAST ===
+function showToast(message, type = 'info') {
+  const container = document.getElementById('toastContainer');
+  const toast = document.createElement('div');
+  toast.className = `
+    px-4 py-3 rounded shadow-lg text-white animate-fade-in-up
+    ${type === 'success' ? 'bg-emerald-600' :
+      type === 'error' ? 'bg-red-600' :
+      type === 'warn' ? 'bg-yellow-600 text-black' :
+      'bg-slate-700'}
+  `;
+  toast.innerText = message;
+  container.appendChild(toast);
+
+  // Hapus otomatis setelah 5 detik
+  setTimeout(() => {
+    toast.classList.add('opacity-0', 'translate-y-2', 'transition');
+    setTimeout(() => toast.remove(), 500);
+  }, 5000);
+}
+
+// Animasi sederhana (Tailwind + keyframes)
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes fadeInUp { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+.animate-fade-in-up { animation: fadeInUp 0.3s ease-out; }
+`;
+document.head.appendChild(style);
+
+let prevStatus = {}; // untuk simpan status sebelumnya
+
+function listenDeviceStatus() {
+  const gh = ghSelect.value;
+  const ref = db.ref(`/greenhouse/${gh}/control`);
+
+  ref.off(); // pastikan tidak double listener
+  ref.on("value", (snap) => {
+    if (!snap.exists()) return;
+    const data = snap.val();
+
+    // Bandingkan dengan status sebelumnya
+    Object.entries(data).forEach(([alat, val]) => {
+      if (!val) return;
+
+      const prev = prevStatus[alat]?.status;
+      const curr = val.status;
+
+      // Hanya tampilkan jika status berubah
+      if (prev && prev !== curr) {
+        if (curr === "ON") {
+          showToast(`${alat} dinyalakan`, "success");
+        } else if (curr === "OFF") {
+          showToast(`${alat} dimatikan`, "warn");
+        }
+      }
+
+      // Simpan status saat ini
+      prevStatus[alat] = { ...val };
+    });
+  });
+}
+
+
+// === STATUS ONLINE/OFFLINE ESP32 ===
+function startEspStatusListener() {
+  const gh = ghSelect.value; // ambil GH yang dipilih dari dropdown
+  const statusRef = db.ref(`/greenhouse/${gh}/status`);
+
+  statusRef.on("value", snap => {
+    const data = snap.val();
+    const el = document.getElementById("espStatus");
+
+    if (!data || !data.esp32_lastUpdate) {
+      el.innerHTML = "⚫ Tidak ada data ESP32";
+      el.className = "px-4 py-2 rounded text-sm font-semibold bg-slate-800 text-slate-400";
+      return;
+    }
+     
+    const last = new Date(data.esp32_lastUpdate);
+    const wibDate = new Date(last.getTime() + 7 * 60 * 60 * 1000);
+    const diffSec = (Date.now() - wibDate.getTime()) / 1000;
+    const online = diffSec < 60; // dianggap online kalau update < 60 detik
+
+    const timeLocal = wibDate.toLocaleString("id-ID", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZone: "Asia/Jakarta"
+    });
+
+    if (online) {
+      el.innerHTML = `🟢 ESP32 ${gh} Online <span class="text-xs text-slate-300">(${timeLocal} WIB)</span>`;
+      el.className = "px-4 py-2 rounded text-sm font-semibold bg-green-600/20 text-green-400";
+    } else {
+      el.innerHTML = `🔴 ESP32 ${gh} Offline <span class="text-xs text-slate-300">(${timeLocal} WIB)</span>`;
+      el.className = "px-4 py-2 rounded text-sm font-semibold bg-red-600/20 text-red-400";
+    }
+  });
+}
+
+
+
+
+// jalankan pertama kali sesuai GH awal
+setupControls(ghSelect.value);
+
+
+
+
+// Jalankan pertama kali
+listenRealtime();
+loadHistory();
+loadAll();
+// Jalankan setelah loadAll()
+ghSelect.addEventListener("change", listenDeviceStatus);
+window.addEventListener("load", listenDeviceStatus);
+</script>
+
+<!-- === TOAST CONTAINER === -->
+<div id="toastContainer" class="fixed bottom-4 right-4 flex flex-col gap-2 z-50"></div>
+
+</body>
+</html>
