@@ -1,0 +1,19 @@
+2026-08-21 06:54:30 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=401 response={
+  "error" : "Unauthorized request."
+}
+
+2026-08-21 06:54:36 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=401 response={
+  "error" : "Unauthorized request."
+}
+
+2026-08-21 06:57:45 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=401 response={
+  "error" : "Unauthorized request."
+}
+
+2026-08-21 06:58:15 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=401 response={
+  "error" : "Unauthorized request."
+}
+
+2026-08-21 07:01:17 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=200 response=true
+2026-08-21 07:01:39 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=200 response=true
+2026-08-21 07:01:55 - deviceId=8C0FCF76B144 callerUid=k4TAixzL6McdpX9DLbkHkqW1MMA2 checkUrl=https://ladangwohijo-2cdfb-default-rtdb.asia-southeast1.firebasedatabase.app/deviceOwners/8C0FCF76B144/k4TAixzL6McdpX9DLbkHkqW1MMA2.json httpCode=200 response=true

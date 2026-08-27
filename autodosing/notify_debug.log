@@ -1,0 +1,665 @@
+2026-08-14 05:56:20 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 05:56:20 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fZnqf_UIOhNYgsxRvx12oS:APA91bFC6o0SH71AC8vsd1zdbR5qvxlr9xuE9YFVVbC2UZyEn-EniHrg7dRF6OE1DnhRxwLw3QrUhn4ICF2hEqZgAucK0WLjnXDTxbA-bq9_EvLSew4nNN8"}
+2026-08-14 05:56:20 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 05:56:20 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/1e7a83bb-b5b8-4f9a-a97b-5005e48751b5"
+}
+
+2026-08-14 06:00:31 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:00:31 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fZnqf_UIOhNYgsxRvx12oS:APA91bFC6o0SH71AC8vsd1zdbR5qvxlr9xuE9YFVVbC2UZyEn-EniHrg7dRF6OE1DnhRxwLw3QrUhn4ICF2hEqZgAucK0WLjnXDTxbA-bq9_EvLSew4nNN8"}
+2026-08-14 06:00:31 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:00:31 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/9e33b119-f3f8-4085-9d16-367c82e293a7"
+}
+
+2026-08-14 06:01:58 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:01:58 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"f29PH6_8DiKyumIV9JZ0IF:APA91bHM7KP0CK4glbZ35WKmshoLaS4Ri9Yfv-9ZKK55htlDbG4dtHbgqC-udNMzbo3BW2aI6pvGZSxpeZusY_MVC96x45Qb1AyvPK9SMr_n9xUDGgnRxwE"}
+2026-08-14 06:01:58 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:01:59 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b4dc7fc2-8090-4580-a92f-eb1abfe1c8a4"
+}
+
+2026-08-14 06:02:49 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:02:49 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"f29PH6_8DiKyumIV9JZ0IF:APA91bHM7KP0CK4glbZ35WKmshoLaS4Ri9Yfv-9ZKK55htlDbG4dtHbgqC-udNMzbo3BW2aI6pvGZSxpeZusY_MVC96x45Qb1AyvPK9SMr_n9xUDGgnRxwE"}
+2026-08-14 06:02:49 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:02:49 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/8b880b6a-30be-4eba-b785-97d4e7d6fbc2"
+}
+
+2026-08-14 06:09:00 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:09:00 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"f29PH6_8DiKyumIV9JZ0IF:APA91bHhNE0_d_RaZZX5pO_FtNyjEnA9oHIPq224laHkJYZWbchti2x5vm9q3Yyf1w1nTdV_y86weFmpSAZ3PKaRdiqqc3anVcjKU7-XwO40jqwytZgu_2M"}
+2026-08-14 06:09:00 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:09:00 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e2f48110-bef7-4ccb-bac3-4895dc25f683"
+}
+
+2026-08-14 06:10:08 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:10:08 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"f29PH6_8DiKyumIV9JZ0IF:APA91bHhNE0_d_RaZZX5pO_FtNyjEnA9oHIPq224laHkJYZWbchti2x5vm9q3Yyf1w1nTdV_y86weFmpSAZ3PKaRdiqqc3anVcjKU7-XwO40jqwytZgu_2M"}
+2026-08-14 06:10:08 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:10:08 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/a03edd9f-96e4-429c-a7b5-f1ac2073c53a"
+}
+
+2026-08-14 06:15:11 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:15:11 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"f29PH6_8DiKyumIV9JZ0IF:APA91bHhNE0_d_RaZZX5pO_FtNyjEnA9oHIPq224laHkJYZWbchti2x5vm9q3Yyf1w1nTdV_y86weFmpSAZ3PKaRdiqqc3anVcjKU7-XwO40jqwytZgu_2M"}
+2026-08-14 06:15:11 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:15:12 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/9fc4fc7e-9b34-4bc2-aa68-edd4452800d5"
+}
+
+2026-08-14 06:16:36 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:16:36 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"f29PH6_8DiKyumIV9JZ0IF:APA91bHhNE0_d_RaZZX5pO_FtNyjEnA9oHIPq224laHkJYZWbchti2x5vm9q3Yyf1w1nTdV_y86weFmpSAZ3PKaRdiqqc3anVcjKU7-XwO40jqwytZgu_2M"}
+2026-08-14 06:16:36 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:16:36 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/9780a0f5-1094-428e-881a-6950074b6112"
+}
+
+2026-08-14 06:31:50 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:31:50 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"dGHs0LlwEe2jr0WsU8hUPu:APA91bGEpLB0nJG5-7e_5VPQLemkndVxsYMo8817zwNRMNOgLen9pnvqY60XtOT7MGUNOUmTbNT1CNW6-69t3bvoK-lOxUhOm1GAtdDPzrTeoFvlCWHzEOc"}
+2026-08-14 06:31:50 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:31:50 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/ec3cc8a6-40c9-4b10-8ec7-a15c7a3eaa47"
+}
+
+2026-08-14 06:47:05 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 06:47:05 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 06:47:05 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 06:47:06 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/f279b138-577e-441e-9588-e2062ae918ca"
+}
+
+2026-08-14 07:21:04 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 07:21:04 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 07:21:04 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 07:21:04 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/0a112865-085a-4617-af50-55b983b50fa9"
+}
+
+2026-08-14 08:26:15 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 08:26:15 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 08:26:15 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 08:26:17 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b9cffe5d-634d-4db9-bf3c-eeb82af86f96"
+}
+
+2026-08-14 08:40:22 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 08:40:22 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 08:40:22 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 08:40:22 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/f15a9cba-37c0-4ce7-be8b-5d71f6457122"
+}
+
+2026-08-14 09:03:50 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 09:03:50 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 09:03:50 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 09:03:50 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/0d1a8553-42b9-4733-8c95-1fcdd03fd049"
+}
+
+2026-08-14 09:17:53 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 09:17:53 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 09:17:53 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 09:17:53 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e913de42-ce07-4373-9aa2-cdd702ee8d2b"
+}
+
+2026-08-14 09:19:24 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-14 09:19:24 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-14 09:19:24 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-14 09:19:24 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/193ddfd4-1461-4d11-8784-8f4500abcd34"
+}
+
+2026-08-15 02:51:45 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-15 02:51:45 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-15 02:51:45 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-15 02:51:45 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-15 02:51:45 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-15 02:51:45 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-15 02:51:45 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/80109f77-21c0-4fc0-82cf-21deca588df6"
+}
+
+2026-08-15 02:51:45 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b1b5379a-e48d-40cc-84cd-d20d5f4d7793"
+}
+
+2026-08-15 02:54:14 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-15 02:54:14 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-15 02:54:14 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-15 02:54:14 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b52cb45b-a22e-4cd0-b6a7-6b497068566e"
+}
+
+2026-08-15 03:23:44 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-15 03:23:44 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-15 03:23:44 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-15 03:23:44 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/186f3d3a-1dd5-4d23-bfe0-474a43f62df3"
+}
+
+2026-08-15 05:58:36 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-15 05:58:38 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-15 05:58:38 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-15 05:58:38 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/3a23f53f-e5fa-4164-a26e-fc74f62e8302"
+}
+
+2026-08-15 06:10:59 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-15 06:10:59 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-15 06:10:59 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-15 06:11:00 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/815811b1-adf7-401b-a81f-733868331e5f"
+}
+
+2026-08-18 01:24:16 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 01:24:16 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 01:24:16 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 01:24:17 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/99e74a67-e9f6-4e45-96d8-87ca8857d2e2"
+}
+
+2026-08-18 01:27:29 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 01:27:29 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 01:27:29 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 01:27:29 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/08ed20b4-f75b-4215-8078-72fd38270524"
+}
+
+2026-08-18 03:22:27 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 03:22:27 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 03:22:27 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 03:22:27 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/0c9fbaf5-bb95-4986-8fae-8fb68c03fa6a"
+}
+
+2026-08-18 04:58:49 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 04:58:49 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 04:58:49 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 04:58:50 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/17937884-40cf-4bcd-a493-f4a677f12205"
+}
+
+2026-08-18 04:59:04 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 04:59:04 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 04:59:04 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 04:59:04 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/068fa7ca-3ac8-4cec-914e-aac8db2064a4"
+}
+
+2026-08-18 04:59:32 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 04:59:32 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 04:59:32 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 04:59:33 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/ada3e76d-2ee3-48ae-936c-b93807cc53ba"
+}
+
+2026-08-18 04:59:35 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 04:59:35 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 04:59:35 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 04:59:36 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/59db97e8-31bc-41c3-9579-73e9b5d95976"
+}
+
+2026-08-18 05:59:16 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 05:59:16 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 05:59:16 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 05:59:16 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/d75ffc46-601a-431f-bfca-e9a3b697a228"
+}
+
+2026-08-18 05:59:32 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 05:59:32 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 05:59:32 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 05:59:33 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/a6012f6d-10b4-4733-9f35-51a0dd6b74f7"
+}
+
+2026-08-18 06:00:11 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:00:11 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:00:11 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:00:12 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/8e7f411d-3db8-4888-891d-2b1f5395fbc7"
+}
+
+2026-08-18 06:00:21 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:00:21 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:00:21 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:00:22 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/c3fced0a-64c0-4ac5-822e-2fb04132b3ee"
+}
+
+2026-08-18 06:01:22 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:01:22 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:01:22 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:01:22 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/51c78195-ee2c-46c5-a2a9-29e2c84a793c"
+}
+
+2026-08-18 06:02:06 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:02:07 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:02:07 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:02:07 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/02d475e0-4f1e-4f6f-8e6b-df50b421115c"
+}
+
+2026-08-18 06:02:29 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:02:29 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:02:29 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:02:29 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e946e17c-faf3-41df-8797-5a8cd771d481"
+}
+
+2026-08-18 06:06:39 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:06:40 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:06:40 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:06:40 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/77ec393e-1408-4bde-a9ff-9ce3901986df"
+}
+
+2026-08-18 06:47:18 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 06:47:18 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 06:47:18 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 06:47:19 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/c0da6fa2-28bd-4223-9a8a-2f0ae0185577"
+}
+
+2026-08-18 07:11:51 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-18 07:11:51 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-18 07:11:51 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-18 07:11:52 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b83c904a-6492-4582-bb6b-c2de8eb83564"
+}
+
+2026-08-19 01:39:46 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 01:39:47 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 01:39:47 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 01:39:47 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/13c4ab59-d035-49e5-b2f5-e857dc070a2a"
+}
+
+2026-08-19 02:49:30 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 02:49:30 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 02:49:30 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 02:49:31 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/9253fa61-d376-4cf2-8be4-d7e1a8092d4e"
+}
+
+2026-08-19 02:49:57 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 02:49:58 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 02:49:58 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 02:49:58 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e206ac4e-0371-46d0-a5a4-c20c72c0c3a5"
+}
+
+2026-08-19 02:50:05 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 02:50:05 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 02:50:05 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 02:50:05 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/7989d1b2-b02f-4801-aacb-b0c461a4a703"
+}
+
+2026-08-19 02:50:14 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 02:50:14 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 02:50:14 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 02:50:14 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/7e781da2-418a-4c6d-95e1-74c8cae65d97"
+}
+
+2026-08-19 03:47:33 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 03:47:33 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 03:47:33 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 03:47:34 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/8030e4cc-8545-4ec9-834c-79809de5f1c7"
+}
+
+2026-08-19 03:57:15 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 03:57:15 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 03:57:15 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 03:57:16 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/524b984a-5987-41ce-916e-660f3c91f177"
+}
+
+2026-08-19 03:57:19 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 03:57:19 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 03:57:19 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 03:57:19 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b2542829-3aab-4278-a3c9-5723579f4d65"
+}
+
+2026-08-19 03:57:25 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 03:57:25 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 03:57:25 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 03:57:26 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/525d4761-c887-4add-807b-582de1f279fb"
+}
+
+2026-08-19 03:57:47 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 03:57:47 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 03:57:47 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 03:57:47 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/2988f610-0361-4d06-a0f5-aafc5b28dd59"
+}
+
+2026-08-19 03:57:51 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 03:57:51 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 03:57:51 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 03:57:51 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/d08d1acc-014e-4c0c-812b-008b04b1c008"
+}
+
+2026-08-19 07:59:31 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 07:59:31 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 07:59:31 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 07:59:32 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/04b67847-4067-4e94-b654-eb4e31e0ff65"
+}
+
+2026-08-19 08:55:21 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 08:55:21 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 08:55:21 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 08:55:21 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/296a77f3-69c0-485f-bc3b-e0c8f12a97ff"
+}
+
+2026-08-19 09:01:13 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 09:01:13 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 09:01:13 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 09:01:13 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/ec164769-a53e-4925-91f8-654abfc3455a"
+}
+
+2026-08-19 09:05:18 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 09:05:18 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 09:05:18 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 09:05:18 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/846a3f86-a5e5-41e2-af02-72da5cfa6be9"
+}
+
+2026-08-19 09:07:19 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-19 09:07:19 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-19 09:07:19 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-19 09:07:19 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/9c63d43a-a386-479b-96bf-d07bed8113d7"
+}
+
+2026-08-20 01:22:24 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-20 01:22:25 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-20 01:22:25 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-20 01:22:25 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/735f9986-491a-4a6f-a69c-8db296ea0808"
+}
+
+2026-08-20 01:50:41 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-20 01:50:41 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-20 01:50:41 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-20 01:50:41 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/4185de3f-50b4-41f8-8e2d-6865ff82f82e"
+}
+
+2026-08-20 02:11:17 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-20 02:11:17 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-20 02:11:17 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-20 02:11:17 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/42f3c746-f76a-470d-9a48-c782b09dff87"
+}
+
+2026-08-20 02:14:09 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-20 02:14:09 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-20 02:14:09 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-20 02:14:09 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/1b893100-42ad-4fbf-bf3d-3c1131517e29"
+}
+
+2026-08-20 02:15:09 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-20 02:15:09 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-20 02:15:09 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-20 02:15:09 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/1e7442b1-7530-4f9e-b01e-aca4babfb96b"
+}
+
+2026-08-20 02:15:14 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-20 02:15:14 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-20 02:15:14 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-20 02:15:14 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/3be49568-f39b-42b9-b913-00a0e73d551c"
+}
+
+2026-08-21 06:29:25 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-21 06:29:25 - Baca fcmTokens - HTTP 200, curl error: -, response: {"k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-21 06:29:25 - Ditemukan 1 token, mulai kirim FCM...
+2026-08-21 06:29:25 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/f77e7805-91e0-47c2-8adc-5de2263cedbd"
+}
+
+2026-08-21 06:30:02 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-21 06:30:02 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"fTvg30fC2Avls6I1OvBpO_:APA91bFmlifVrU6FzrNl1YIQPSS2l5hP19DIsMxSq9K5d3kxm_xAagISih098_jDt2loL3ovDE2vUpWbs6xSKk9fQja3JU49vp5GMeCxO-JUCNlt9KI-rC0"}
+2026-08-21 06:30:02 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-21 06:30:02 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/b46a1888-f13f-4a7a-ab43-247b251a943b"
+}
+
+2026-08-21 06:30:03 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/905075dc-26d0-456b-914e-ad112401b3fa"
+}
+
+2026-08-21 06:30:24 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-21 06:30:25 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"c-mAa42nvjCwmj-hfee6Z4:APA91bGtSnhgv3aItcMc6oGEfqNbymkrJi6-KDp-UXyGacDzm2giZ3uKQ9eF71LydRODjGWWP8gdUbDenKS04KYjt8W4MDrvH2_k761BLbpMERnZdoCfSoM"}
+2026-08-21 06:30:25 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-21 06:30:25 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/7de1d6f9-6d7b-4622-9174-bf50d8dfda36"
+}
+
+2026-08-21 06:30:25 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e946968b-695d-4636-abe6-d37009c3c819"
+}
+
+2026-08-21 06:39:37 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-21 06:39:37 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"c-mAa42nvjCwmj-hfee6Z4:APA91bGtSnhgv3aItcMc6oGEfqNbymkrJi6-KDp-UXyGacDzm2giZ3uKQ9eF71LydRODjGWWP8gdUbDenKS04KYjt8W4MDrvH2_k761BLbpMERnZdoCfSoM"}
+2026-08-21 06:39:37 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-21 06:39:37 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/bdf803e3-412c-4235-8b90-4c425d58e89f"
+}
+
+2026-08-21 06:39:38 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/661d0ba1-e6ce-4b39-ab64-b4d6713c8fef"
+}
+
+2026-08-22 21:07:15 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:07:15 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"c-mAa42nvjCwmj-hfee6Z4:APA91bGtSnhgv3aItcMc6oGEfqNbymkrJi6-KDp-UXyGacDzm2giZ3uKQ9eF71LydRODjGWWP8gdUbDenKS04KYjt8W4MDrvH2_k761BLbpMERnZdoCfSoM"}
+2026-08-22 21:07:15 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:07:15 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/ba4f2cd3-2e38-43d5-b258-dc0f975933ac"
+}
+
+2026-08-22 21:07:16 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/d97517cd-2811-4d5b-b459-f800ab19dabb"
+}
+
+2026-08-22 21:08:28 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:08:28 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:08:28 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:08:28 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/26fa7cdb-a32b-4a82-b04b-9dc4190077c9"
+}
+
+2026-08-22 21:08:28 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/27cd77d3-4993-4bd7-8f5b-2b419515b758"
+}
+
+2026-08-22 21:08:54 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:08:54 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:08:54 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:08:54 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/d4075376-5569-48a8-9a9d-9d1de08e0f7b"
+}
+
+2026-08-22 21:08:54 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/921a9f04-fbf5-4e73-8a5c-611846fc994f"
+}
+
+2026-08-22 21:21:04 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:21:04 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:21:04 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:21:04 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/1cd16449-e29d-4972-afea-074367e9889f"
+}
+
+2026-08-22 21:21:04 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/06a30a14-5b34-4d60-8140-e4c0750d69fa"
+}
+
+2026-08-22 21:22:06 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:22:06 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:22:06 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:22:06 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/45436828-55e8-42c5-9df1-3afc6bc34030"
+}
+
+2026-08-22 21:22:06 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/af591a6a-5d76-4db3-bd27-e839c54af86f"
+}
+
+2026-08-22 21:22:57 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:22:57 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:22:57 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:22:57 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e9f37967-c2d8-4984-a27b-a7e0727d8ac4"
+}
+
+2026-08-22 21:22:57 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/32fbb3fc-cf94-42e7-920b-20cec1fc8d72"
+}
+
+2026-08-22 21:23:02 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:23:02 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:23:02 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:23:03 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/dafa60ed-f9aa-4744-9ef6-114fda6ce113"
+}
+
+2026-08-22 21:23:03 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/2150312f-5bdc-43f0-845c-4dd6aa5c904f"
+}
+
+2026-08-22 21:23:21 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:23:21 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:23:21 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:23:21 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/973c3194-c92d-4f89-8078-43cb8a5e7b94"
+}
+
+2026-08-22 21:23:21 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/7f2eb824-9d73-4acd-8c02-4e0e3b57fae7"
+}
+
+2026-08-22 21:23:37 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:23:37 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:23:37 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:23:37 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/683f8c2a-df32-49ce-8595-030e96aee5f0"
+}
+
+2026-08-22 21:23:37 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e025bfcf-8927-4083-97c8-6b7a3a6439f6"
+}
+
+2026-08-22 21:23:41 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:23:42 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:23:42 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:23:42 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/fc2f2760-f9b0-4592-92d0-8e34d616c55c"
+}
+
+2026-08-22 21:23:42 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/ed4b6d68-e57e-42b3-b4cf-f0676af7ac68"
+}
+
+2026-08-22 21:23:52 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:23:52 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGrLk0bFbelevHZQYydjyu4GL8dRnCxqCD9TBeaNeDV5lG9EEIsOOHJ9T0DoYoRUQrnjseJFPvMsJ7Oguh0itvw4FxOyzyyZwz6fIt4Yxd0WlrtXP8"}
+2026-08-22 21:23:52 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:23:52 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/08c8dcd1-5a41-49b3-96bf-4f2cf5f72d1c"
+}
+
+2026-08-22 21:23:52 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/e574b9e4-3d48-4223-8e73-77ad8205a243"
+}
+
+2026-08-22 21:48:00 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:48:00 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-22 21:48:00 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:48:00 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/af17046e-0786-48d4-b66d-1ca43ad32e47"
+}
+
+2026-08-22 21:48:00 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/8d193151-ed2b-4175-ba73-1b3c6db0a807"
+}
+
+2026-08-22 21:59:33 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 21:59:33 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-22 21:59:33 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 21:59:33 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/73c800d4-cbff-4997-8d1d-0802140c9723"
+}
+
+2026-08-22 21:59:33 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/f71407f1-e4e1-490c-b6ec-54427e4f0ec7"
+}
+
+2026-08-22 22:05:30 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 22:05:30 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-22 22:05:30 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 22:05:30 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/59be7504-288c-4f02-8045-8d16ad04fe15"
+}
+
+2026-08-22 22:05:30 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/355453a7-e936-4f3f-ab4a-f1c7b7d5f781"
+}
+
+2026-08-22 23:18:08 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-22 23:18:09 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-22 23:18:09 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-22 23:18:09 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/a7936f9d-23f6-4935-b29f-12200fe67861"
+}
+
+2026-08-22 23:18:09 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/9ee62396-4d8b-4f73-85b9-1d724ced1c61"
+}
+
+2026-08-24 01:08:19 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-24 01:08:19 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-24 01:08:19 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-24 01:08:19 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/46eecc24-b6df-4cc1-b299-a9ce2c6de878"
+}
+
+2026-08-24 01:08:20 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/f66e89b5-a342-4702-9cd2-a72fa56b970d"
+}
+
+2026-08-24 12:26:39 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-24 12:26:39 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-24 12:26:39 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-24 12:26:39 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/5f0aea5d-b82c-4069-9121-03311a595115"
+}
+
+2026-08-24 12:26:39 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/a350a520-977d-498e-bc7b-f4c07de575bb"
+}
+
+2026-08-24 12:27:13 - Access token OK, cari fcmTokens untuk device: 8C0FCF76B144
+2026-08-24 12:27:13 - Baca fcmTokens - HTTP 200, curl error: -, response: {"CeokKSJry2Wf1pagvQGz600oPZw2":"fzjuuUgQPlPsRZvb8ZK2VQ:APA91bGkF4zoT4Lf6PRznpQ7keqduvKm7Lju2mJST-EQ1nxzCC5brUxRY-AZ9-ezmgjiwo6fTByXqmG8oQ91krluTIp0-s62Cy7JL4k4_Utz-cBEK3x98co","k4TAixzL6McdpX9DLbkHkqW1MMA2":"cwHrRlDuyuBEgtHh_Ml0xp:APA91bGJByqLGlre354uZUgdgHFMZlra9QpSVMZlniOCkPeGFattkHb9ME3kwRcStL6dJ8m-nPoGyn8U_IUWir012TdwrWNV0_Ucr4MMBpPQkRnUlYRH7SY"}
+2026-08-24 12:27:13 - Ditemukan 2 token, mulai kirim FCM...
+2026-08-24 12:27:14 - Kirim FCM ke uid=CeokKSJry2Wf1pagvQGz600oPZw2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/38e77bed-964c-4fcf-b27d-4699cf132336"
+}
+
+2026-08-24 12:27:14 - Kirim FCM ke uid=k4TAixzL6McdpX9DLbkHkqW1MMA2 - HTTP 200 - response: {
+  "name": "projects/ladangwohijo-2cdfb/messages/2cfcf28b-6dbf-45ee-a095-2122c7b9adbc"
+}
+
